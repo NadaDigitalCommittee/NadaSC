@@ -41,6 +41,7 @@ export default {
   cursor: pointer;
   right: 5%;
   top: calc(20px + 4vw);
+  z-index: 10;
 }
 .menu-trigger span {
   position: absolute;

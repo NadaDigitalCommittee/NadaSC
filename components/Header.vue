@@ -1,7 +1,9 @@
 <template>
   <div class="header">
-    <img src="@/assets/img/nada.png" alt="" />
-    <h1>灘校生徒会</h1>
+    <nuxt-link to="">
+      <img src="@/assets/img/nada.png" alt="" />
+      <h1>灘校生徒会</h1>
+    </nuxt-link>
     <Menubutton />
   </div>
 </template>
@@ -12,6 +14,13 @@ export default {}
 .header {
   display: flex;
   margin: 20px 5%;
+  position: relative;
+  z-index: 10;
+}
+a {
+  text-decoration: none;
+  display: flex;
+  color: black;
 }
 img {
   width: 15vw;

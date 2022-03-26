@@ -13,11 +13,25 @@
           <nuxt-link to="" class="morebutton">More</nuxt-link>
         </button>
       </div>
-      <div class="block">
-        <nuxt-link to=""
-          >生徒会の取り組み<span>Student Council Activities</span></nuxt-link
-        >
-      </div>
+      <Block
+        color="#418996"
+        title="生徒会の取り組み"
+        subtitle="Student Council Activities"
+        link=""
+      ></Block>
+      <Block
+        color="#37AF7C"
+        title="生徒会構造図"
+        subtitle="Student Council Structure"
+        link=""
+      ></Block>
+      <Block
+        color="#9DAF37"
+        title="生徒会機関"
+        subtitle="Student Council Organization"
+        link=""
+      ></Block>
+      <Block color="#AF8A37" title="生徒会規約" subtitle="Student Council Rules" link=""></Block>
     </section>
   </div>
 </template>
@@ -63,6 +77,7 @@ export default {}
   .button {
     margin-top: 50px;
     .morebutton {
+      display: block;
       border: 2px solid black;
       position: relative;
       text-decoration: none;
@@ -71,26 +86,6 @@ export default {}
       font-weight: 700;
       border-radius: 30px;
       padding: 0.7em 4em;
-    }
-  }
-}
-
-.block {
-  width: 95%;
-  background-color: #418996;
-  padding-left: 5%;
-  padding-top: 110px;
-  padding-bottom: 30px;
-  position: absolute;
-  right: 0;
-  a {
-    text-decoration: none;
-    color: #F9FBFB;
-    font-size: 2em;
-    span {
-      display: block;
-      font-size: 1rem;
-      font-style: italic;
     }
   }
 }

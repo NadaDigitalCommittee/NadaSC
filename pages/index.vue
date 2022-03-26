@@ -48,6 +48,43 @@
           <nuxt-link to="" class="morebutton">More</nuxt-link>
         </button>
       </div>
+      <Block
+        color="#418996"
+        title="年間行事"
+        subtitle="Year Actions"
+        link=""
+      ></Block>
+      <Block
+        color="#37AF7C"
+        title="学校設備"
+        subtitle="School Facilities"
+        link=""
+      ></Block>
+    </section>
+    <section class="gallery">
+      <div class="heading">
+        <h2>ギャラリー<span>Gallery</span></h2>
+        <p>灘校の校舎風景や文化祭・体育祭の様子などを公開します。</p>
+      </div>
+      <Block
+        color="#418996"
+        title="校舎"
+        subtitle="School Buildings"
+        link=""
+      ></Block>
+      <Block
+        color="#37AF7C"
+        title="文化祭"
+        subtitle="School Festival"
+        link=""
+      ></Block>
+      <Block
+        color="#9DAF37"
+        title="体育祭"
+        subtitle="Athletic Festival"
+        link=""
+      ></Block>
+      <Block color="#AF8A37" title="その他" subtitle="Others" link=""></Block>
     </section>
   </div>
 </template>
@@ -110,6 +147,15 @@ export default {}
       font-size: 1rem;
     }
     margin-bottom: 50px;
+  }
+  h2::after {
+    content: '';
+    display: block;
+    width: 3em;
+    height: 2px;
+    background-color: #000;
+    position: relative;
+    bottom: -1.2rem;
   }
 
   p {

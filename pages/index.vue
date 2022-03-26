@@ -10,8 +10,13 @@
           灘校生徒会には様々な委員会・PTが存在します。それらをご紹介します。
         </p>
         <button class="button">
-          <nuxt-link to="aaa" class="morebutton">More</nuxt-link>
+          <nuxt-link to="" class="morebutton">More</nuxt-link>
         </button>
+      </div>
+      <div class="block">
+        <nuxt-link to=""
+          >生徒会の取り組み<span>Student Council Activities</span></nuxt-link
+        >
       </div>
     </section>
   </div>
@@ -31,8 +36,14 @@ export default {}
     min-width: 100vw;
   }
 }
+
+.intro {
+  margin-top: calc(100vh - 15vw - 20px);
+}
+
 .heading {
   padding: 80px 10%;
+
   h2 {
     font-weight: 900;
     font-size: 2.3em;
@@ -43,14 +54,17 @@ export default {}
     }
     margin-bottom: 50px;
   }
+
   p {
     font-size: 1.2em;
     letter-spacing: 0.05em;
   }
+
   .button {
     margin-top: 50px;
     .morebutton {
       border: 2px solid black;
+      position: relative;
       text-decoration: none;
       color: inherit;
       font-size: 1em;
@@ -60,7 +74,24 @@ export default {}
     }
   }
 }
-.intro {
-  margin-top: calc(100vh - 15vw - 20px);
+
+.block {
+  width: 95%;
+  background-color: #418996;
+  padding-left: 5%;
+  padding-top: 110px;
+  padding-bottom: 30px;
+  position: absolute;
+  right: 0;
+  a {
+    text-decoration: none;
+    color: #F9FBFB;
+    font-size: 2em;
+    span {
+      display: block;
+      font-size: 1rem;
+      font-style: italic;
+    }
+  }
 }
 </style>

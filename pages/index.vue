@@ -31,7 +31,23 @@
         subtitle="Student Council Organization"
         link=""
       ></Block>
-      <Block color="#AF8A37" title="生徒会規約" subtitle="Student Council Rules" link=""></Block>
+      <Block
+        color="#AF8A37"
+        title="生徒会規約"
+        subtitle="Student Council Rules"
+        link=""
+      ></Block>
+    </section>
+    <section class="school">
+      <div class="heading">
+        <h2 class="blackmidashi">学校紹介<span>School</span></h2>
+        <p>
+          灘校の概略について、新入生向けの冊子『灘校便覧』より抜粋して掲載します。
+        </p>
+        <button class="button">
+          <nuxt-link to="" class="morebutton">More</nuxt-link>
+        </button>
+      </div>
     </section>
   </div>
 </template>
@@ -39,6 +55,7 @@
 export default {}
 </script>
 <style lang="scss" scoped>
+// トップ画像の表示
 .img-wrapper {
   width: 100vw;
   height: 100vh;
@@ -51,10 +68,36 @@ export default {}
   }
 }
 
+// 生徒会紹介
 .intro {
   margin-top: calc(100vh - 15vw - 20px);
 }
 
+// 学校紹介
+.school {
+  background-color: #000;
+  .heading {
+    color: #f9fbfb;
+
+    .blackmidashi::after {
+      content: '';
+      display: block;
+      width: 3em;
+      height: 2px;
+      background-color: #f9fbfb;
+      position: relative;
+      bottom: -1.2rem;
+    }
+    .button {
+      .morebutton {
+        color: #f9fbfb;
+        border: #f9fbfb 1.5px solid;
+      }
+    }
+  }
+}
+
+// トップページの共通のスタイル
 .heading {
   padding: 80px 10%;
 
@@ -78,7 +121,7 @@ export default {}
     margin-top: 50px;
     .morebutton {
       display: block;
-      border: 2px solid black;
+      border: 1.5px solid black;
       position: relative;
       text-decoration: none;
       color: inherit;

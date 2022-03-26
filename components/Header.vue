@@ -102,7 +102,7 @@ export default {
   a {
     text-decoration: none;
     display: flex;
-    color: black;
+    color: #000;
     z-index: 10;
   }
   img {

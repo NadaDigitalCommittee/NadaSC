@@ -5,6 +5,7 @@
       class="menu-trigger"
       id="menu"
       v-on:click="open = !open"
+      @click="send"
       v-bind:class="{ active: open }"
     >
       <span></span>
@@ -20,6 +21,12 @@ export default {
     return {
       open: false,
     }
+  },
+  methods: {
+    send() {
+      this.$emit('click', this.open)
+      // Headerコンポーネントにopenの値を送信、フルスクリーンナビゲーションはHeaderコンポーネントで管理
+    },
   },
 }
 </script>
@@ -41,7 +48,10 @@ export default {
   cursor: pointer;
   right: 5%;
   top: calc(20px + 4vw);
-  z-index: 10;
+  z-index: 200;
+}
+.menu-trigger.active span {
+  background-color: #f9fbfb;
 }
 .menu-trigger span {
   position: absolute;

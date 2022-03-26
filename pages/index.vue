@@ -89,18 +89,30 @@
   </div>
 </template>
 <script>
-export default {}
+export default {
+  mounted() {
+    // スマホで見たときに100vhを指定してもはみ出さないようにする
+    function setHeight() {
+      const vh = window.innerHeight * 0.01
+      document.documentElement.style.setProperty('--vh', `${vh}px`)
+    }
+
+    setHeight()
+
+    window.addEventListener('resize', setHeight)
+  },
+}
 </script>
 <style lang="scss" scoped>
 // トップ画像の表示
 .img-wrapper {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
+  min-height: calc(var(--vh, 1vh) * 100);
   overflow: hidden;
   position: absolute;
   top: 0;
   .topimg {
-    height: 100vh;
     min-width: 100vw;
   }
 }

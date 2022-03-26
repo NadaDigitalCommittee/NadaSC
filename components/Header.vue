@@ -38,14 +38,14 @@
         <nuxt-link to="" @click.native="open = !open"
           >Gallery<span>ギャラリー</span></nuxt-link
         >
-        <nuxt-link tag="li" to="" @click.native="open = !open">校舎</nuxt-link
+        <!-- <nuxt-link tag="li" to="" @click.native="open = !open">校舎</nuxt-link
         ><nuxt-link tag="li" to="" @click.native="open = !open"
           >文化祭</nuxt-link
         ><nuxt-link tag="li" to="" @click.native="open = !open"
           >体育祭</nuxt-link
         ><nuxt-link tag="li" to="" @click.native="open = !open"
           >その他</nuxt-link
-        >
+        > -->
       </div>
     </nav>
     <div class="header">
@@ -76,7 +76,20 @@ export default {
     }
   },
 }
+// 1.関数の定義
+function setHeight() {
+  let vh = window.innerHeight * 0.01
+  document.documentElement.style.setProperty('--vh', `${vh}px`)
+}
+
+// 2.初期化
+setHeight()
+
+// 3.ブラウザのサイズが変更された時・画面の向きを変えた時に再計算する
+window.addEventListener('resize', setHeight)
 </script>
+
+
 <style lang="scss" scoped>
 // ハンバーガーメニューのcssは別途記述
 @import '@/assets/css/hamburger.scss';
@@ -110,19 +123,20 @@ nav {
   z-index: 20;
   color: #f9fbfb;
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
+  min-height: calc(var(--vh, 1vh) * 100);
   background-color: #000;
   padding-left: 10%;
   a {
     color: inherit;
     text-decoration: none;
-    font-size: 1.3em;
+    font-size: 1.5em;
     width: max-content;
     display: block;
   }
   a span {
     display: block;
-    font-size: 0.5rem;
+    font-size: 1rem;
   }
   .group {
     width: max-content;
@@ -133,7 +147,7 @@ nav {
     li {
       list-style: none;
       line-height: 2;
-      font-size: 0.5em;
+      font-size: 0.7em;
     }
     li:before {
       content: 'ー';

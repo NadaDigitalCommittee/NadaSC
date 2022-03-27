@@ -21,6 +21,10 @@ export default {
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/nada.ico' },
       { rel: 'apple-touch-icon', href: '@/assets/img/nada-white.png' },
+      {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Round|Material+Icons+Sharp|Material+Icons+Two+Tone',
+      },
     ],
   },
 

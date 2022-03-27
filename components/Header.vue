@@ -49,8 +49,8 @@
       </div>
     </nav>
     <div class="header">
-      <nuxt-link to="">
-        <img src="@/assets/img/nada.png" alt="" />
+      <nuxt-link to="/">
+        <img src="@/assets/img/nada.png" alt="topimg" />
         <h1>灘校生徒会</h1>
       </nuxt-link>
       <!-- ハンバーガーメニュー -->

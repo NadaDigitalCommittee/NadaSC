@@ -29,7 +29,7 @@
         color="#9DAF37"
         title="生徒会機関"
         subtitle="Student Council Organization"
-        link=""
+        link="organization"
       ></Block>
       <Block
         color="#AF8A37"

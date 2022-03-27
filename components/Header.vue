@@ -16,7 +16,7 @@
         <nuxt-link tag="li" to="" @click.native="open = !open"
           >生徒会構造図</nuxt-link
         >
-        <nuxt-link tag="li" to="" @click.native="open = !open"
+        <nuxt-link tag="li" to="organization" @click.native="open = !open"
           >生徒会機関</nuxt-link
         >
         <nuxt-link tag="li" to="" @click.native="open = !open"

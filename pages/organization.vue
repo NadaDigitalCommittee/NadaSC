@@ -3,14 +3,19 @@
     <h1 class="midashi">生徒会機関<span>Student Council Organization</span></h1>
     <nav class="tabs">
       <ul>
-        <li><button @click="tabnum = 1">中央委員</button></li>
+        <li><button @click="tabnum = 1">中央委員会</button></li>
         <li><button @click="tabnum = 2">評議会</button></li>
-        <li><button @click="tabnum = 3">補助委員会</button></li>
+        <li><button @click="tabnum = 3">補助機関</button></li>
       </ul>
     </nav>
     <transition>
       <section class="central sentence" v-show="tabnum == 1">
-        <h2>中央委員</h2>
+        <h2>中央委員会</h2>
+        <div class="introduction">
+          <p>
+            生徒会長、会計担当副会長、体育委員長、文化委員長により構成され、各中央委員はその任務の遂行を円滑にするため下部機関を置いています。
+          </p>
+        </div>
         <dl>
           <Accordion>
             <div slot="title">タイトル</div>
@@ -46,9 +51,14 @@
     <transition>
       <section class="parliament sentence" v-show="tabnum == 2">
         <h2>評議会</h2>
-        <p class="introduction">
-          評議会は生徒会の最高機関かつ唯一の議決機関で、各クラスから２名ずつ選出された評議員から構成されています。各クラスの評議員は互選により首席評議員を選出します。さらに、評議員から議長・副議長・理事が選出されます。首席評議員と議長は兼任できません。予算案の承認や規則案の議決などをするのが主な役割です。
-        </p>
+        <div class="introduction">
+          <p>
+            評議会は生徒会の最高機関かつ唯一の議決機関で、各クラスから２名ずつ選出された評議員から構成されています。各クラスの評議員は互選により首席評議員を選出します。
+          </p>
+          <p>
+            さらに、評議員から議長・副議長・理事が選出されます。首席評議員と議長は兼任できません。予算案の承認や規則案の議決などをするのが主な役割です。
+          </p>
+        </div>
         <Accordion>
           <div slot="title">本会議</div>
           <div slot="content">
@@ -80,7 +90,7 @@
     </transition>
     <transition>
       <section class="assist sentence" v-show="tabnum == 3">
-        <h2>補助委員会</h2>
+        <h2>補助機関</h2>
       </section>
     </transition>
     <dl></dl>
@@ -118,6 +128,9 @@ export default {
   .introduction {
     line-height: 1.5;
     margin-top: 1em;
+    p {
+      margin-bottom: 0.5em;
+    }
   }
 
   dd {

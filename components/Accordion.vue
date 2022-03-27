@@ -30,6 +30,7 @@ export default {
     font-size: 1.3em;
     margin-bottom: 1em;
     position: relative;
+    border-bottom: 1px #000 solid;
   }
   dt::after {
     font-family: 'Material Icons';

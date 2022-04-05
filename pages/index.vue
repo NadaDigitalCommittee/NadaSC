@@ -118,12 +118,7 @@ export default {
   position: absolute;
   top: 0;
   width: 100vw;
-  min-height: 100vh;
-}
-@supports (-webkit-touch-callout: none) {
-  .topimg {
-    min-height: -webkit-fill-available;
-  }
+  min-height: calc(var(--vh, 1vh) * 100);
 }
 
 // 生徒会紹介

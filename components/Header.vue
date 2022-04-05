@@ -75,6 +75,17 @@ export default {
       open: false,
     }
   },
+  mounted() {
+    // スマホで見たときに100vhを指定してもはみ出さないようにする
+    function setHeight() {
+      const vh = window.innerHeight * 0.01
+      document.documentElement.style.setProperty('--vh', `${vh}px`)
+    }
+
+    setHeight()
+
+    window.addEventListener('resize', setHeight)
+  },
 }
 </script>
 
@@ -113,6 +124,7 @@ nav {
   color: #f9fbfb;
   width: 100vw;
   min-height: 100vh;
+  min-height: calc(var(--vh, 1vh) * 100);
   background-color: #000;
   padding-left: 10%;
   a {

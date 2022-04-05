@@ -1,8 +1,6 @@
 <template>
   <div>
-    <div class="img-wrapper">
-      <img src="@/assets/img/topimg.png" alt="topimg" class="topimg" />
-    </div>
+    <img src="@/assets/img/topimg.JPG" alt="topimg" class="topimg" />
     <section class="intro">
       <div class="heading">
         <h2>生徒会紹介<span>Student Council</span></h2>
@@ -92,16 +90,17 @@
 export default {}
 </script>
 <style lang="scss" scoped>
+html {
+  height: -webkit-fill-available;
+}
+
 // トップ画像の表示
-.img-wrapper {
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
+.topimg {
   position: absolute;
   top: 0;
-  .topimg {
-    min-width: 100vw;
-  }
+  width: 100vw;
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
 }
 
 // 生徒会紹介

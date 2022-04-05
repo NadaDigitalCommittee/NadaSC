@@ -106,7 +106,7 @@ export default {
 .hero {
   position: absolute;
   top: 0;
-  height: calc(var(--vh) * 100);
+  height: 100vh;
   width: 100%;
 }
 .topimg {
@@ -114,6 +114,11 @@ export default {
   height: 100%;
 }
 
+@supports (-webkit-touch-callout: none) {
+  .hero {
+    height: -webkit-fill-available;
+  }
+}
 // 生徒会紹介
 .intro {
   margin-top: calc(100vh - 15vw - 20px);

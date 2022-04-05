@@ -123,8 +123,8 @@ nav {
   z-index: 20;
   color: #f9fbfb;
   width: 100vw;
-  min-height: 100vh;
-  min-height: calc(var(--vh, 1vh) * 100);
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   background-color: #000;
   padding-left: 10%;
   a {

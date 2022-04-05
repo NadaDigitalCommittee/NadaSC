@@ -87,20 +87,39 @@
   </div>
 </template>
 <script>
-export default {}
+export default {
+  mounted() {
+    const setFillHeight = () => {
+      const vh = window.innerHeight * 0.01
+      document.documentElement.style.setProperty('--vh', `${vh}px`)
+    }
+
+    let vw = window.innerWidth
+
+    window.addEventListener('resize', () => {
+      if (vw === window.innerWidth) {
+        // 画面の横幅にサイズ変動がないので処理を終える
+        return
+      }
+
+      // 画面の横幅のサイズ変動があった時のみ高さを再計算する
+      vw = window.innerWidth
+      setFillHeight()
+    })
+
+    // 初期化
+    setFillHeight()
+  },
+}
 </script>
 <style lang="scss" scoped>
-html {
-  height: -webkit-fill-available;
-}
-
 // トップ画像の表示
 .topimg {
   position: absolute;
   top: 0;
   width: 100vw;
   min-height: 100vh;
-  min-height: -webkit-fill-available;
+  min-height: calc(var(--vh, 1vh) * 100);
 }
 
 // 生徒会紹介

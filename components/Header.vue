@@ -77,14 +77,24 @@ export default {
   },
   mounted() {
     // スマホで見たときに100vhを指定してもはみ出さないようにする
-    function setHeight() {
+    const setFillHeight = () => {
       const vh = window.innerHeight * 0.01
       document.documentElement.style.setProperty('--vh', `${vh}px`)
     }
 
-    setHeight()
+    let vw = window.innerWidth
 
-    window.addEventListener('resize', setHeight)
+    window.addEventListener('resize', () => {
+      if (vw === window.innerWidth) {
+        return
+      }
+
+      // 画面の横幅のサイズ変動があった時のみ高さを再計算する
+      vw = window.innerWidth
+      setFillHeight()
+    })
+
+    setFillHeight()
   },
 }
 </script>

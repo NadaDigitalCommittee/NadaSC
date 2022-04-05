@@ -121,6 +121,7 @@ export default {
 }
 // 生徒会紹介
 .intro {
+  margin-top: -webkit-fill-available;
   margin-top: calc(100vh - 15vw - 20px);
 }
 

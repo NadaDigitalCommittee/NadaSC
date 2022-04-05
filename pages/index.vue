@@ -58,7 +58,7 @@
         color="#37AF7C"
         title="学校設備"
         subtitle="School Facilities"
-        link=""
+        link="facilities"
       ></Block>
     </section>
     <section class="gallery">

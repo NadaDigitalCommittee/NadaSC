@@ -3,9 +3,15 @@
     <h1 class="midashi">生徒会機関<span>Student Council Organization</span></h1>
     <nav class="tabs">
       <ul>
-        <li><button @click="tabnum = 1">中央委員会</button></li>
-        <li><button @click="tabnum = 2">評議会</button></li>
-        <li><button @click="tabnum = 3">補助機関</button></li>
+        <li v-bind:class="{ active: tabnum == 1 }">
+          <button @click="tabnum = 1">中央委員会</button>
+        </li>
+        <li v-bind:class="{ active: tabnum == 2 }">
+          <button @click="tabnum = 2">評議会</button>
+        </li>
+        <li v-bind:class="{ active: tabnum == 3 }">
+          <button @click="tabnum = 3">補助機関</button>
+        </li>
       </ul>
     </nav>
     <transition>
@@ -269,11 +275,16 @@ nav.tabs {
     justify-content: space-around;
     li {
       width: 30vw;
-      border-bottom: 1px black solid;
       text-align: center;
+      background-color: #000;
+      color: #fff;
       button {
         width: 100%;
+        padding: 10px 0;
       }
+    }
+    li.active {
+      background-color: #666666;
     }
   }
 }

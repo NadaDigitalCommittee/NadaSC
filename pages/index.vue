@@ -119,7 +119,7 @@ export default {
 .hero {
   position: absolute;
   top: 0;
-  min-height: calc(var(--vh) * 100);
+  height: calc(var(--vh) * 100);
   width: 100%;
 }
 .topimg {

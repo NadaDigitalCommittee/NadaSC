@@ -115,7 +115,7 @@ export default {
 <style lang="scss" scoped>
 // トップ画像の表示
 .topimg {
-  position: absolute;
+  // position: absolute;
   top: 0;
   width: 100vw;
   min-height: calc(var(--vh, 1vh) * 100);

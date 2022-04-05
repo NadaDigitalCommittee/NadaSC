@@ -1,6 +1,8 @@
 <template>
   <div>
-    <img src="@/assets/img/topimg.JPG" alt="topimg" class="topimg" />
+    <div class="hero">
+      <img src="@/assets/img/topimg.JPG" alt="topimg" class="topimg" />
+    </div>
     <section class="intro">
       <div class="heading">
         <h2>生徒会紹介<span>Student Council</span></h2>
@@ -114,11 +116,15 @@ export default {
 </script>
 <style lang="scss" scoped>
 // トップ画像の表示
-.topimg {
-  // position: absolute;
+.hero {
+  position: absolute;
   top: 0;
-  width: 100vw;
-  min-height: calc(var(--vh, 1vh) * 100);
+  min-height: calc(var(--vh) * 100);
+  width: 100%;
+}
+.topimg {
+  width: 100%;
+  height: 100%;
 }
 
 // 生徒会紹介

@@ -118,7 +118,7 @@ export default {
 .topimg {
   width: 100%;
   height: 100%;
-  background-image: url('@/assets/img/topimg.jpg');
+  background-image: url('@/assets/img/topimg.JPG');
 
   background-size: cover;
 }
@@ -205,7 +205,7 @@ export default {
 // PC版
 @media screen and (min-width: 960px) {
   .topimg {
-    background-image: url('@/assets/img/topimg-pc.jpg');
+    background-image: url('@/assets/img/topimgpc.JPG');
   }
   .intro {
     margin-top: calc(100vh - 3em - 40px);

@@ -1,9 +1,9 @@
 <template>
   <div>
     <div class="hero">
-      <img src="@/assets/img/topimg.JPG" alt="topimg" class="topimg" />
+      <div class="topimg"></div>
     </div>
-    <section class="intro">
+    <section class="intro section-wrap">
       <div class="heading">
         <h2>生徒会紹介<span>Student Council</span></h2>
         <p>
@@ -13,32 +13,34 @@
           <nuxt-link to="" class="morebutton">More</nuxt-link>
         </button>
       </div>
-      <Block
-        color="#418996"
-        title="生徒会の取り組み"
-        subtitle="Student Council Activities"
-        link=""
-      ></Block>
-      <Block
-        color="#37AF7C"
-        title="生徒会構造図"
-        subtitle="Student Council Structure"
-        link=""
-      ></Block>
-      <Block
-        color="#9DAF37"
-        title="生徒会機関"
-        subtitle="Student Council Organization"
-        link="organization"
-      ></Block>
-      <Block
-        color="#AF8A37"
-        title="生徒会規約"
-        subtitle="Student Council Rules"
-        link=""
-      ></Block>
+      <div class="blocks">
+        <Block
+          color="#418996"
+          title="生徒会の取り組み"
+          subtitle="Student Council Activities"
+          link=""
+        ></Block>
+        <Block
+          color="#37AF7C"
+          title="生徒会構造図"
+          subtitle="Student Council Structure"
+          link=""
+        ></Block>
+        <Block
+          color="#9DAF37"
+          title="生徒会機関"
+          subtitle="Student Council Organization"
+          link="organization"
+        ></Block>
+        <Block
+          color="#AF8A37"
+          title="生徒会規約"
+          subtitle="Student Council Rules"
+          link=""
+        ></Block>
+      </div>
     </section>
-    <section class="school">
+    <section class="school section-wrap">
       <div class="heading">
         <h2 class="blackmidashi">学校紹介<span>School</span></h2>
         <p>
@@ -48,43 +50,47 @@
           <nuxt-link to="" class="morebutton">More</nuxt-link>
         </button>
       </div>
-      <Block
-        color="#418996"
-        title="年間行事"
-        subtitle="Year Actions"
-        link=""
-      ></Block>
-      <Block
-        color="#37AF7C"
-        title="学校設備"
-        subtitle="School Facilities"
-        link="facilities"
-      ></Block>
+      <div class="blocks">
+        <Block
+          color="#418996"
+          title="年間行事"
+          subtitle="Year Actions"
+          link=""
+        ></Block>
+        <Block
+          color="#37AF7C"
+          title="学校設備"
+          subtitle="School Facilities"
+          link="facilities"
+        ></Block>
+      </div>
     </section>
-    <section class="gallery">
+    <section class="gallery section-wrap">
       <div class="heading">
         <h2>ギャラリー<span>Gallery</span></h2>
         <p>灘校の校舎風景や文化祭・体育祭の様子などを公開します。</p>
       </div>
-      <Block
-        color="#418996"
-        title="校舎"
-        subtitle="School Buildings"
-        link=""
-      ></Block>
-      <Block
-        color="#37AF7C"
-        title="文化祭"
-        subtitle="School Festival"
-        link=""
-      ></Block>
-      <Block
-        color="#9DAF37"
-        title="体育祭"
-        subtitle="Athletic Festival"
-        link=""
-      ></Block>
-      <Block color="#AF8A37" title="その他" subtitle="Others" link=""></Block>
+      <div class="blocks">
+        <Block
+          color="#418996"
+          title="校舎"
+          subtitle="School Buildings"
+          link=""
+        ></Block>
+        <Block
+          color="#9DAF37"
+          title="文化祭"
+          subtitle="School Festival"
+          link=""
+        ></Block>
+        <Block
+          color="#37AF7C"
+          title="体育祭"
+          subtitle="Athletic Festival"
+          link=""
+        ></Block>
+        <Block color="#AF8A37" title="その他" subtitle="Others" link=""></Block>
+      </div>
     </section>
   </div>
 </template>
@@ -112,6 +118,9 @@ export default {
 .topimg {
   width: 100%;
   height: 100%;
+  background-image: url(@/assets/img/topimg.JPG);
+
+  background-size: cover;
 }
 
 @supports (-webkit-touch-callout: none) {
@@ -121,7 +130,6 @@ export default {
 }
 // 生徒会紹介
 .intro {
-  margin-top: -webkit-fill-available;
   margin-top: calc(100vh - 15vw - 20px);
 }
 
@@ -190,6 +198,64 @@ export default {
       font-weight: 700;
       border-radius: 30px;
       padding: 0.7em 4em;
+    }
+  }
+}
+
+// PC版
+@media screen and (min-width: 960px) {
+  .topimg {
+    background-image: url(@/assets/img/topimg-pc.JPG);
+  }
+  .intro {
+    margin-top: calc(100vh - 3em - 40px);
+    display: flex;
+    padding-left: 5%;
+    .blocks {
+      width: 65%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin-left: 5%;
+    }
+  }
+
+  .school {
+    display: flex;
+    padding-left: 5%;
+    .blocks {
+      width: 65%;
+      display: grid;
+      grid-template-columns: 1fr;
+      margin-left: 5%;
+    }
+  }
+  .gallery {
+    display: flex;
+    padding-left: 5%;
+    .blocks {
+      width: 65%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin-left: 5%;
+    }
+  }
+
+  // トップページの共通のスタイル
+  .heading {
+    width: 30%;
+    padding: 80px 0;
+
+    h2 {
+      font-size: 2em;
+      span {
+        font-size: 0.9rem;
+      }
+    }
+
+    p {
+      font-size: 1em;
+      letter-spacing: 0.05em;
+      line-height: 2;
     }
   }
 }

@@ -55,4 +55,10 @@ export default {
     }
   }
 }
+@media screen and (min-width: 960px) {
+  .block{
+    width: 100%;
+    margin: 0;
+  }
+}
 </style>

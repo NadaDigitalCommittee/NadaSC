@@ -30,6 +30,7 @@
   height: 2px;
   background-color: #000;
   border-radius: 1px;
+  filter: drop-shadow(2px 2px 5px #cccccc);
 }
 
 .menu-trigger span:nth-of-type(1) {
@@ -179,5 +180,11 @@
     100% {
       transform: translateY(-21px) rotate(-45deg);
     }
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .menu-trigger{
+    display: none;
   }
 }

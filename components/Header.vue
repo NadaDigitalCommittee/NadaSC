@@ -48,6 +48,8 @@
         > -->
       </div>
     </nav>
+
+    <!-- ヘッダー -->
     <div class="header">
       <nuxt-link to="/">
         <img src="@/assets/img/nada.png" alt="topimg" />
@@ -104,6 +106,7 @@ export default {
     display: flex;
     color: #000;
     z-index: 10;
+    filter: drop-shadow(1px 1px 5px #cccccc);
   }
   img {
     width: 15vw;
@@ -161,5 +164,19 @@ nav.active {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+// PC版
+@media screen and (min-width: 960px) {
+  .header {
+    h1 {
+      font-size: 2em;
+      margin-top: 0;
+    }
+    img {
+      width: 3.3em;
+      height: 3.3em;
+    }
+  }
 }
 </style>

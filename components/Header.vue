@@ -27,7 +27,7 @@
         <nuxt-link to="" @click.native="open = !open"
           >School<span>学校紹介</span></nuxt-link
         >
-        <nuxt-link tag="li" to="" @click.native="open = !open"
+        <nuxt-link tag="li" to="events" @click.native="open = !open"
           >年間行事</nuxt-link
         >
         <nuxt-link tag="li" to="facilities" @click.native="open = !open"

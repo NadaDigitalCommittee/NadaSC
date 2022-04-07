@@ -55,7 +55,7 @@
           color="#418996"
           title="年間行事"
           subtitle="Year Actions"
-          link=""
+          link="events"
         ></Block>
         <Block
           color="#37AF7C"

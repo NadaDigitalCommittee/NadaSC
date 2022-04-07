@@ -1,5 +1,6 @@
 <template>
   <div>
+    <Header />
     <div class="hero">
       <div class="topimg"></div>
     </div>
@@ -92,11 +93,11 @@
         <Block color="#AF8A37" title="その他" subtitle="Others" link=""></Block>
       </div>
     </section>
-    <Footer />
   </div>
 </template>
 <script>
 export default {
+  layout: 'indexpage',
   mounted() {
     const setFillHeight = () => {
       const vh = window.innerHeight * 0.01
@@ -109,6 +110,13 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+::v-deep .header {
+  height: 100vh;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding-top: 20px;
+}
+
 // トップ画像の表示
 .hero {
   position: absolute;
@@ -128,10 +136,9 @@ export default {
   .hero {
     height: -webkit-fill-available;
   }
-}
-// 生徒会紹介
-.intro {
-  margin-top: calc(100vh - 15vw - 20px);
+  ::v-deep .header {
+    height: -webkit-fill-available;
+  }
 }
 
 // 学校紹介
@@ -209,7 +216,6 @@ export default {
     background-image: url('@/assets/img/topimgpc.JPG');
   }
   .intro {
-    margin-top: calc(100vh - 3em - 40px);
     display: flex;
     padding-left: 5%;
     .blocks {

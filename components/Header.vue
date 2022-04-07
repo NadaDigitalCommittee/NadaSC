@@ -16,7 +16,10 @@
         <nuxt-link tag="li" to="/council/structure" @click.native="open = !open"
           >生徒会構造図</nuxt-link
         >
-        <nuxt-link tag="li" to="/council/organization" @click.native="open = !open"
+        <nuxt-link
+          tag="li"
+          to="/council/organization"
+          @click.native="open = !open"
           >生徒会機関</nuxt-link
         >
         <nuxt-link tag="li" to="/council/rules" @click.native="open = !open"

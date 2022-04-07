@@ -92,6 +92,7 @@
         <Block color="#AF8A37" title="その他" subtitle="Others" link=""></Block>
       </div>
     </section>
+    <Footer />
   </div>
 </template>
 <script>

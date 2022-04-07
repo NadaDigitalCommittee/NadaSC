@@ -106,7 +106,7 @@ export default {
     display: flex;
     color: #000;
     z-index: 10;
-    filter: drop-shadow(1px 1px 5px #cccccc);
+    filter: drop-shadow(0px 0px 5px #cccccc);
   }
   img {
     width: 15vw;

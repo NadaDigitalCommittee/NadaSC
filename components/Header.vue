@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="main">
     <nav v-bind:class="{ active: open }">
       <div class="group">
         <nuxt-link to="/" @click.native="open = !open"

@@ -110,7 +110,7 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-::v-deep .header {
+::v-deep .main .header {
   height: 100vh;
   margin-bottom: 0;
   margin-top: 0;
@@ -136,7 +136,7 @@ export default {
   .hero {
     height: -webkit-fill-available;
   }
-  ::v-deep .header {
+  ::v-deep .main .header {
     height: -webkit-fill-available;
   }
 }

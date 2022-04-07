@@ -303,4 +303,13 @@ nav.tabs {
 .v-leave-from {
   opacity: 1;
 }
+
+@media screen and (min-width: 960px) {
+  .sentence{
+    margin: 0 20%;
+  }
+  nav.tabs{
+    margin: 3em 20%;
+  }
+}
 </style>

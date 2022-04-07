@@ -30,13 +30,13 @@
           color="#9DAF37"
           title="生徒会機関"
           subtitle="Student Council Organization"
-          link="organization"
+          link="/council/organization"
         ></Block>
         <Block
           color="#AF8A37"
           title="生徒会規約"
           subtitle="Student Council Rules"
-          link=""
+          link="/council/rules"
         ></Block>
       </div>
     </section>
@@ -55,13 +55,13 @@
           color="#418996"
           title="年間行事"
           subtitle="Year Actions"
-          link="events"
+          link="/school/events"
         ></Block>
         <Block
           color="#37AF7C"
           title="学校設備"
           subtitle="School Facilities"
-          link="facilities"
+          link="/school/facilities"
         ></Block>
       </div>
     </section>

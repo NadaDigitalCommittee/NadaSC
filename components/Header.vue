@@ -7,7 +7,7 @@
         >
       </div>
       <div class="group">
-        <nuxt-link to="" @click.native="open = !open"
+        <nuxt-link to="/council" @click.native="open = !open"
           >Student Council<span>生徒会紹介</span></nuxt-link
         >
         <nuxt-link tag="li" to="" @click.native="open = !open"
@@ -16,10 +16,10 @@
         <nuxt-link tag="li" to="" @click.native="open = !open"
           >生徒会構造図</nuxt-link
         >
-        <nuxt-link tag="li" to="organization" @click.native="open = !open"
+        <nuxt-link tag="li" to="/council/organization" @click.native="open = !open"
           >生徒会機関</nuxt-link
         >
-        <nuxt-link tag="li" to="" @click.native="open = !open"
+        <nuxt-link tag="li" to="/council/rules" @click.native="open = !open"
           >生徒会規則</nuxt-link
         >
       </div>
@@ -27,10 +27,10 @@
         <nuxt-link to="" @click.native="open = !open"
           >School<span>学校紹介</span></nuxt-link
         >
-        <nuxt-link tag="li" to="events" @click.native="open = !open"
+        <nuxt-link tag="li" to="/school/events" @click.native="open = !open"
           >年間行事</nuxt-link
         >
-        <nuxt-link tag="li" to="facilities" @click.native="open = !open"
+        <nuxt-link tag="li" to="/school/facilities" @click.native="open = !open"
           >学校設備</nuxt-link
         >
       </div>

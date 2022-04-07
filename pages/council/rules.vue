@@ -12,6 +12,7 @@ export default {}
 <style lang="scss" scoped>
 .comment {
   margin: 5%;
+  text-align: center;
 }
 
 .midashi {

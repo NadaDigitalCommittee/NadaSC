@@ -24,7 +24,7 @@
           color="#37AF7C"
           title="生徒会構造図"
           subtitle="Student Council Structure"
-          link=""
+          link="/council/structure"
         ></Block>
         <Block
           color="#9DAF37"

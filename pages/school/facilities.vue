@@ -3,7 +3,7 @@
     <h1 class="midashi">学校設備<span>School Facilities</span></h1>
     <section>
       <h2>3号館</h2>
-      <img src="@/assets/img/facilities/building3.png" alt="3号館" />
+      <img src="@/assets/img/facilities/building3.jpg" alt="3号館" />
       <p>
         3号館は、2011~13年の改修工事で新築された、1号館と2号館を繋いでいる校舎です(西館と1号館の1階のPC教室、2階の校長室、3階の第2社会科教室・理科講義室を含めて3号館と呼ぶこともあります)。
       </p>

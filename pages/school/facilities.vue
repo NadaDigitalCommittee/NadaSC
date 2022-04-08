@@ -38,8 +38,8 @@
       </p>
     </section>
     <section>
-      <img src="@/assets/img/facilities/training_center.jpg" alt="研修館">
       <h2>研修館</h2>
+      <img src="@/assets/img/facilities/training_center.jpg" alt="研修館">
       <p>
         研修館は校舎の西側に位置し、西門を入って右手に見える建物です。魚崎駅から登校する人はよく目にすることになると思います。
       </p>

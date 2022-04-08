@@ -35,7 +35,7 @@
         ></Block>
         <Block
           color="#AF8A37"
-          title="生徒会規約"
+          title="生徒会規約規則"
           subtitle="Student Council Rules"
           link="/council/rules"
         ></Block>

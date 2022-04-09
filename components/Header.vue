@@ -10,9 +10,6 @@
         <nuxt-link to="/council" @click.native="open = !open"
           >Student Council<span>生徒会紹介</span></nuxt-link
         >
-        <nuxt-link tag="li" to="" @click.native="open = !open"
-          >生徒会の取り組み</nuxt-link
-        >
         <nuxt-link tag="li" to="/council/structure" @click.native="open = !open"
           >生徒会構造図</nuxt-link
         >

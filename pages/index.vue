@@ -16,12 +16,7 @@
       </div>
       <div class="blocks">
         <Block
-          color="#418996"
-          title="生徒会の取り組み"
-          subtitle="Student Council Activities"
-          link=""
-        ></Block>
-        <Block
+          class="structure"
           color="#37AF7C"
           title="生徒会構造図"
           subtitle="Student Council Structure"
@@ -223,6 +218,9 @@ export default {
       display: grid;
       grid-template-columns: 1fr 1fr;
       margin-left: 5%;
+      .structure {
+        grid-column: 1/3;
+      }
     }
   }
 

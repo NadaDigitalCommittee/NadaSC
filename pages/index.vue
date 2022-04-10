@@ -110,6 +110,9 @@ export default {
   margin-bottom: 0;
   margin-top: 0;
   padding-top: 20px;
+  a{
+    height: fit-content;
+  }
 }
 
 // トップ画像の表示

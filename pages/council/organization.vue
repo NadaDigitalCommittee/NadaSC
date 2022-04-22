@@ -269,7 +269,6 @@
         </Accordion>
       </section>
     </transition>
-    <dl></dl>
   </div>
 </template>
 <script>

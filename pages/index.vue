@@ -61,33 +61,6 @@
         ></Block>
       </div>
     </section>
-    <section class="gallery section-wrap">
-      <div class="heading">
-        <h2>ギャラリー<span>Gallery</span></h2>
-        <p>灘校の校舎風景や文化祭・体育祭の様子などを公開します。</p>
-      </div>
-      <div class="blocks">
-        <Block
-          color="#418996"
-          title="校舎"
-          subtitle="School Buildings"
-          link=""
-        ></Block>
-        <Block
-          color="#9DAF37"
-          title="文化祭"
-          subtitle="School Festival"
-          link=""
-        ></Block>
-        <Block
-          color="#37AF7C"
-          title="体育祭"
-          subtitle="Athletic Festival"
-          link=""
-        ></Block>
-        <Block color="#AF8A37" title="その他" subtitle="Others" link=""></Block>
-      </div>
-    </section>
   </div>
 </template>
 <script>
@@ -110,8 +83,28 @@ export default {
   margin-bottom: 0;
   margin-top: 0;
   padding-top: 20px;
-  a{
+  a {
     height: fit-content;
+    color: #fff;
+  }
+
+  .imgwrapper {
+    background: url('@/assets/img/nada-reverse.png');
+    background-size: 15vw 15vw;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+  .menu-trigger span {
+    background-color: #fff;
+  }
+  @media screen and (min-width: 960px) {
+    a {
+      .imgwrapper {
+        width: 3.3em;
+        height: 3.3em;
+        background-size: 3.3em 3.3em;
+      }
+    }
   }
 }
 
@@ -234,16 +227,6 @@ export default {
       width: 65%;
       display: grid;
       grid-template-columns: 1fr;
-      margin-left: 5%;
-    }
-  }
-  .gallery {
-    display: flex;
-    padding-left: 5%;
-    .blocks {
-      width: 65%;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
       margin-left: 5%;
     }
   }

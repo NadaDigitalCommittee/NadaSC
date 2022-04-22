@@ -7,7 +7,7 @@
         >
       </div>
       <div class="group">
-        <nuxt-link to="/council" @click.native="open = !open"
+        <nuxt-link to="" @click.native="open = !open"
           >Student Council<span>生徒会紹介</span></nuxt-link
         >
         <nuxt-link tag="li" to="/council/structure" @click.native="open = !open"
@@ -52,7 +52,9 @@
     <!-- ヘッダー -->
     <div class="header">
       <nuxt-link to="/">
-        <img src="@/assets/img/nada.png" alt="topimg" />
+        <div class="imgwrapper">
+          <!-- <img src="@/assets/img/nada.png" alt="topimg" /> -->
+        </div>
         <h1>灘校生徒会</h1>
       </nuxt-link>
       <!-- ハンバーガーメニュー -->
@@ -100,7 +102,6 @@ export default {
   display: flex;
   margin: 20px 5%;
   position: relative;
-
   a {
     text-decoration: none;
     display: flex;
@@ -108,11 +109,16 @@ export default {
     z-index: 10;
     filter: drop-shadow(0px 0px 5px #cccccc);
   }
-  img {
+  .imgwrapper {
     width: 15vw;
     height: 15vw;
     margin-right: 10px;
+    background-image: url('@/assets/img/nada.png');
+    background-size: 15vw 15vw;
+    background-position: center center;
+    background-repeat: no-repeat;
   }
+
   h1 {
     font-size: 7vw;
     margin-top: 1.5vw;
@@ -173,9 +179,12 @@ nav.active {
       font-size: 2em;
       margin-top: 0;
     }
-    img {
-      width: 3.3em;
-      height: 3.3em;
+    a {
+      .imgwrapper {
+        width: 3.3em;
+        height: 3.3em;
+        background-size: 3.3em;
+      }
     }
   }
 }

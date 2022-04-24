@@ -11,7 +11,7 @@
           灘校生徒会には様々な委員会・PTが存在します。それらをご紹介します。
         </p>
         <button class="button">
-          <nuxt-link to="" class="morebutton">More</nuxt-link>
+          <nuxt-link to="/council" class="morebutton">More</nuxt-link>
         </button>
       </div>
       <div class="blocks">

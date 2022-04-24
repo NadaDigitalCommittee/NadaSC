@@ -7,7 +7,7 @@
         >
       </div>
       <div class="group">
-        <nuxt-link to="" @click.native="open = !open"
+        <nuxt-link to="/council" @click.native="open = !open"
           >Student Council<span>生徒会紹介</span></nuxt-link
         >
         <nuxt-link tag="li" to="/council/structure" @click.native="open = !open"

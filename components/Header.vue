@@ -24,7 +24,7 @@
         >
       </div>
       <div class="group">
-        <nuxt-link to="" @click.native="open = !open"
+        <nuxt-link to="/school" @click.native="open = !open"
           >School<span>学校紹介</span></nuxt-link
         >
         <nuxt-link tag="li" to="/school/events" @click.native="open = !open"
@@ -34,41 +34,39 @@
           >学校設備</nuxt-link
         >
       </div>
-      <div class="group">
-        <nuxt-link to="" @click.native="open = !open"
-          >Gallery<span>ギャラリー</span></nuxt-link
-        >
-        <!-- <nuxt-link tag="li" to="" @click.native="open = !open">校舎</nuxt-link
-        ><nuxt-link tag="li" to="" @click.native="open = !open"
-          >文化祭</nuxt-link
-        ><nuxt-link tag="li" to="" @click.native="open = !open"
-          >体育祭</nuxt-link
-        ><nuxt-link tag="li" to="" @click.native="open = !open"
-          >その他</nuxt-link
-        > -->
-      </div>
     </nav>
 
     <!-- ヘッダー -->
     <div class="header">
-      <nuxt-link to="/">
-        <div class="imgwrapper">
-          <!-- <img src="@/assets/img/nada.png" alt="topimg" /> -->
+      <div class="inside-header">
+        <nuxt-link to="/">
+          <div class="imgwrapper">
+            <!-- <img src="@/assets/img/nada.png" alt="topimg" /> -->
+          </div>
+          <h1>灘校生徒会</h1>
+        </nuxt-link>
+        <!-- ハンバーガーメニュー -->
+        <button
+          class="menu-trigger"
+          id="menu"
+          v-on:click="open = !open"
+          v-bind:class="{ active: open }"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <!-- ハンバーガーメニュー終 -->
+
+        <!-- PC用メニューバー -->
+        <div class="pcmenu">
+          <ul>
+            <li><nuxt-link to="/council">生徒会紹介</nuxt-link></li>
+            <li><nuxt-link to="/school">学校紹介</nuxt-link></li>
+          </ul>
         </div>
-        <h1>灘校生徒会</h1>
-      </nuxt-link>
-      <!-- ハンバーガーメニュー -->
-      <button
-        class="menu-trigger"
-        id="menu"
-        v-on:click="open = !open"
-        v-bind:class="{ active: open }"
-      >
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <!-- ハンバーガーメニュー終 -->
+        <!-- PC用メニューバー終 -->
+      </div>
     </div>
   </div>
 </template>
@@ -99,9 +97,11 @@ export default {
 @import '@/assets/css/hamburger.scss';
 
 .header {
-  display: flex;
   margin: 20px 5%;
   position: relative;
+  .inside-header {
+    display: flex;
+  }
   a {
     text-decoration: none;
     display: flex;
@@ -172,6 +172,27 @@ nav.active {
   justify-content: center;
 }
 
+// PC番メニューバー
+.pcmenu {
+  position: fixed;
+  display: none;
+  z-index: 10;
+  margin-right: 5%;
+  right: 0;
+
+  ul {
+    display: flex;
+    list-style: none;
+    justify-content: right;
+    font-size: 1.5em;
+    font-weight: 600;
+    margin-top: 0.5em;
+    li {
+      margin-left: 1em;
+    }
+  }
+}
+
 // PC版
 @media screen and (min-width: 960px) {
   .header {
@@ -186,6 +207,9 @@ nav.active {
         background-size: 3.3em;
       }
     }
+  }
+  .pcmenu {
+    display: block;
   }
 }
 </style>

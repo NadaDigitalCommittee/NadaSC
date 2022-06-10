@@ -43,7 +43,7 @@
           灘校の概略について、新入生向けの冊子『灘校便覧』より抜粋して掲載します。
         </p>
         <button class="button">
-          <nuxt-link to="" class="morebutton">More</nuxt-link>
+          <nuxt-link to="/school" class="morebutton">More</nuxt-link>
         </button>
       </div>
       <div class="blocks">
@@ -89,7 +89,7 @@ export default {
   }
 
   .imgwrapper {
-    background: url('@/assets/img/nada-reverse.png');
+    background-image: url('@/assets/img/nada-reverse.png');
     background-size: 15vw 15vw;
     background-position: center center;
     background-repeat: no-repeat;
@@ -98,11 +98,22 @@ export default {
     background-color: #fff;
   }
   @media screen and (min-width: 960px) {
+    padding: 0;
+    margin: 0;
+    .inside-header {
+      position: fixed;
+      width: 100%;
+      padding: 20px 5%;
+      background-color: rgba(255, 255, 255, 0.397);
+      z-index: 10;
+    }
     a {
+      color: #000;
       .imgwrapper {
         width: 3.3em;
         height: 3.3em;
         background-size: 3.3em 3.3em;
+        background-image: url('@/assets/img/nada.png');
       }
     }
   }
@@ -208,7 +219,6 @@ export default {
   }
   .intro {
     display: flex;
-    padding-left: 5%;
     .blocks {
       width: 65%;
       display: grid;
@@ -222,7 +232,6 @@ export default {
 
   .school {
     display: flex;
-    padding-left: 5%;
     .blocks {
       width: 65%;
       display: grid;
@@ -232,6 +241,9 @@ export default {
   }
 
   // トップページの共通のスタイル
+  .section-wrap {
+    padding-left: 5%;
+  }
   .heading {
     width: 30%;
     padding: 80px 0;

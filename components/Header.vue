@@ -157,7 +157,7 @@ export default {
     display: flex;
     color: #000;
     z-index: 10;
-    filter: drop-shadow(0px 0px 5px #cccccc);
+    // filter: drop-shadow(0px 0px 5px #cccccc);
   }
   .imgwrapper {
     width: 15vw;

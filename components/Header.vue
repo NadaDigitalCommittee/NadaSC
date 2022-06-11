@@ -61,8 +61,25 @@
         <!-- PC用メニューバー -->
         <div class="pcmenu">
           <ul>
-            <li><nuxt-link to="/council">生徒会紹介</nuxt-link></li>
-            <li><nuxt-link to="/school">学校紹介</nuxt-link></li>
+            <li
+              v-for="(item, index) in pcmenuitems"
+              :key="item.url"
+              class="parentlist"
+              v-on:mouseover="mouseover(index)"
+              v-on:mouseleave="mouseleave(index)"
+            >
+              <nuxt-link :to="item.url">{{ item.name }}</nuxt-link>
+              <transition>
+                <ul
+                  class="dropdown"
+                  v-show="pcmenuopen && index === hoverindex"
+                >
+                  <li v-for="child in item.children" :key="child.name">
+                    <nuxt-link :to="child.url">{{ child.name }}</nuxt-link>
+                  </li>
+                </ul>
+              </transition>
+            </li>
           </ul>
         </div>
         <!-- PC用メニューバー終 -->
@@ -74,8 +91,39 @@
 export default {
   data() {
     return {
+      isopen: false,
       open: false,
+      pcmenuopen: false,
+      hoverindex: null,
+      pcmenuitems: [
+        {
+          url: '/council',
+          name: '生徒会紹介',
+          children: [
+            { url: '/council/organization', name: '生徒会機関' },
+            { url: '/council/rules', name: '生徒会規則' },
+            { url: '/council/structure', name: '生徒会構造図' },
+          ],
+        },
+        {
+          url: '/school',
+          name: '学校紹介',
+          children: [
+            { url: '/school/events', name: '年間行事' },
+            { url: '/school/facilities', name: '学校設備' },
+          ],
+        },
+      ],
     }
+  },
+  methods: {
+    mouseover(index) {
+      this.pcmenuopen = true
+      this.hoverindex = index
+    },
+    mouseleave() {
+      this.pcmenuopen = false
+    },
   },
   mounted() {
     // スマホで見たときに100vhを指定してもはみ出さないようにする
@@ -177,20 +225,43 @@ nav.active {
   position: fixed;
   display: none;
   z-index: 10;
-  margin-right: 5%;
-  right: 0;
+  left: 80%;
 
   ul {
     display: flex;
     list-style: none;
-    justify-content: right;
-    font-size: 1.5em;
     font-weight: 600;
-    margin-top: 0.5em;
-    li {
-      margin-left: 1em;
+    margin-top: 0.8em;
+    justify-content: space-around;
+    li.parentlist {
+      font-size: 1.2em;
+      padding: 0.5em;
+      ul.dropdown {
+        display: fixed;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.73);
+        padding: 0.5em;
+        margin-right: -1em;
+        li {
+          font-size: 1rem;
+          line-height: 2;
+          a {
+            color: #fff;
+            filter: none;
+            font-weight: 400;
+          }
+        }
+      }
     }
   }
+}
+.v-leave-active,
+.v-enter-active {
+  transition: opacity 0.4s;
+}
+.v-enter,
+.v-leave-to {
+  opacity: 0;
 }
 
 // PC版

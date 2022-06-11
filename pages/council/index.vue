@@ -12,7 +12,13 @@
   </div>
 </template>
 <script>
-export default {}
+export default {
+  head() {
+    return {
+      title: '生徒会長挨拶',
+    }
+  },
+}
 </script>
 <style lang="scss" scoped>
 .midashi {

@@ -1,37 +1,17 @@
 <template>
   <div class="main">
     <nav v-bind:class="{ active: open }">
-      <div class="group">
-        <nuxt-link to="/" @click.native="open = !open"
-          >Top<span>トップページ</span></nuxt-link
-        >
-      </div>
-      <div class="group">
-        <nuxt-link to="/council" @click.native="open = !open"
-          >Student Council<span>生徒会紹介</span></nuxt-link
-        >
-        <nuxt-link tag="li" to="/council/structure" @click.native="open = !open"
-          >生徒会構造図</nuxt-link
+      <div class="group" v-for="item in phonemenuitems" :key="item.name">
+        <nuxt-link :to="item.url" @click.native="open = !open"
+          >{{ item.eng }}<span>{{ item.name }}</span></nuxt-link
         >
         <nuxt-link
+          v-for="child in item.children"
+          :key="child.name"
           tag="li"
-          to="/council/organization"
+          :to="child.url"
           @click.native="open = !open"
-          >生徒会機関</nuxt-link
-        >
-        <nuxt-link tag="li" to="/council/rules" @click.native="open = !open"
-          >生徒会規則</nuxt-link
-        >
-      </div>
-      <div class="group">
-        <nuxt-link to="/school" @click.native="open = !open"
-          >School<span>学校紹介</span></nuxt-link
-        >
-        <nuxt-link tag="li" to="/school/events" @click.native="open = !open"
-          >年間行事</nuxt-link
-        >
-        <nuxt-link tag="li" to="/school/facilities" @click.native="open = !open"
-          >学校設備</nuxt-link
+          >{{ child.name }}</nuxt-link
         >
       </div>
     </nav>
@@ -95,6 +75,28 @@ export default {
       open: false,
       pcmenuopen: false,
       hoverindex: null,
+      phonemenuitems: [
+        { url: '/', eng: 'Top', name: 'トップページ' },
+        {
+          url: '/council',
+          eng: 'Student Council',
+          name: '生徒会紹介',
+          children: [
+            { url: '/council/structure', name: '生徒会構造図' },
+            { url: '/council/organization', name: '生徒会機関' },
+            { url: '/council/rules', name: '生徒会規則' },
+          ],
+        },
+        {
+          url: '/school',
+          eng: 'School',
+          name: '学校紹介',
+          children: [
+            { url: '/school/events', name: '年間行事' },
+            { url: '/school/facilities', name: '学校設備' },
+          ],
+        },
+      ],
       pcmenuitems: [
         {
           url: '/council',

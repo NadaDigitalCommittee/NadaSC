@@ -65,6 +65,11 @@
 </template>
 <script>
 export default {
+  head() {
+    return {
+      title: 'トップページ',
+    }
+  },
   layout: 'indexpage',
   mounted() {
     const setFillHeight = () => {

@@ -6,7 +6,13 @@
   </div>
 </template>
 <script>
-export default {}
+export default {
+  head() {
+    return {
+      title: '生徒会構造図',
+    }
+  },
+}
 </script>
 <style lang="scss" scoped>
 .midashi {

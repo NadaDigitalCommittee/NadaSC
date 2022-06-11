@@ -4,7 +4,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: '灘校生徒会HP',
+    titleTemplate: '%s | 灘校生徒会HP',
     htmlAttrs: {
       lang: 'ja',
     },

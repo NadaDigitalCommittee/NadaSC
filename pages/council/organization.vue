@@ -70,18 +70,6 @@
             </div>
           </Accordion>
           <Accordion>
-            <div slot="title">文化委員会</div>
-            <div slot="content">
-              <p>
-                文化委員会は主に文化祭の運営と、高校生が参加する演劇コンクールの運営を行う委員会です。毎年、委員数が一番多い委員会で、生徒の委員会活動の入り口に近い立ち位置と言えます。
-              </p>
-              <p>
-                文化委員長は高校１年及び高校２年の生徒会員から選挙されます。
-              </p>
-              <p><a href="https://fest.nada-sc.jp" target="_blank">文化祭HPはこちら</a></p>
-            </div>
-          </Accordion>
-          <Accordion>
             <div slot="title">体育委員会</div>
             <div slot="content">
               <p>
@@ -93,6 +81,22 @@
               <p>
                 <a href="https://athlete.nada-sc.jp/" target="_blank"
                   >体育祭HPはこちら</a
+                >
+              </p>
+            </div>
+          </Accordion>
+          <Accordion>
+            <div slot="title">文化委員会</div>
+            <div slot="content">
+              <p>
+                文化委員会は主に文化祭の運営と、高校生が参加する演劇コンクールの運営を行う委員会です。毎年、委員数が一番多い委員会で、生徒の委員会活動の入り口に近い立ち位置と言えます。
+              </p>
+              <p>
+                文化委員長は高校１年及び高校２年の生徒会員から選挙されます。
+              </p>
+              <p>
+                <a href="https://fest.nada-sc.jp" target="_blank"
+                  >文化祭HPはこちら</a
                 >
               </p>
             </div>
@@ -293,6 +297,11 @@
 </template>
 <script>
 export default {
+  head() {
+    return {
+      title: '生徒会機関',
+    }
+  },
   data() {
     return {
       tabnum: 1,

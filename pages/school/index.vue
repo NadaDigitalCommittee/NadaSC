@@ -10,7 +10,13 @@
   </div>
 </template>
 <script>
-export default {}
+export default {
+  head() {
+    return {
+      title: '学校紹介',
+    }
+  },
+}
 </script>
 <style lang="scss" scoped>
 .midashi {

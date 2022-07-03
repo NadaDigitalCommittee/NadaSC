@@ -102,7 +102,7 @@
     </section>
     <section>
       <h2>東館</h2>
-      <img src="@/assets/img/facilities/east_biulding.jpg" alt="東館" />
+      <img src="@/assets/img/facilities/east_building.jpg" alt="東館" />
       <p>
         東館は、正門を通ると左手に見える建物で、１号館と繋がっています。地下１階に食堂、１階に大会議室と技術教室と美術教室、２階に視聴覚教室、ICT教室があります。特に、視聴覚教室は、映像を使った授業や、外部からの講師を招いて行う講義、説明会などで、頻繁に利用されます。
       </p>
@@ -110,7 +110,7 @@
     </section>
     <section>
       <h2>中学棟</h2>
-      <img src="@/assets/img/facilities/Building1.jpg" alt="中学棟" />
+      <img src="@/assets/img/facilities/building1.jpg" alt="中学棟" />
       <p>
         今の中学棟は、1938年の火災で焼失した昔の校舎の代わりに作られました。当時としては最高級の鉄筋コンクリートが使われていたため、阪神・淡路大震災でも倒壊することなく、現在もその姿を残しています。この棟の正式名称は１号館ですが、中学校の教室が棟内に入っているため、「中学棟」と呼ばれています。
       </p>

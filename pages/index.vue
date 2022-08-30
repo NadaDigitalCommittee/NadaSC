@@ -71,8 +71,8 @@
       <div class="blocks">
         <Block
           color="#AF8A37"
-          title="終業式の表彰について"
-          subtitle="For Students"
+          title="始業式及び終業式の表彰について"
+          subtitle="Commendations in the Start-of-term and the End-of-term Assembly"
           link="/for-students/commendations"
         ></Block>
       </div>

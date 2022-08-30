@@ -1,7 +1,7 @@
 <template>
   <div>
-    <h1 class="midashi">終業式での表彰について<span>Commendations in the End-of-term Assembly</span></h1>
-    <p class="comment">終業式での表彰を希望する生徒の皆さんは、こちらのGoogleフォームに灘校のstgアカウントから回答してください。&emsp;<a href="https://forms.gle/C4co4NDEPzZag9ZK8">表示されない場合はこちら</a></p>
+    <h1 class="midashi">始業式及び終業式での表彰について<span>Commendations in the Start-of-term and the End-of-term Assembly</span></h1>
+    <p class="comment">始業式及び終業式での表彰を希望する生徒の皆さんは、こちらのGoogleフォームに灘校のstgアカウントから回答してください。&emsp;<a href="https://forms.gle/C4co4NDEPzZag9ZK8">表示されない場合はこちら</a></p>
     <iframe id="form-iframe" src="https://docs.google.com/forms/d/e/1FAIpQLScM8UCTJpeiouIB_5nT5AsXx4OL0KCBTzW3-QHcHz0X-i11rw/viewform?embedded=true" frameborder="no" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
   </div>
 </template>

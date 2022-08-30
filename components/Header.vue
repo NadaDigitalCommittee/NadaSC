@@ -101,7 +101,7 @@ export default {
           eng: 'For Students',
           name: '校内生向け',
           children: [
-            { url: '/for-students/commendations', name: '終業式の表彰について' },
+            { url: '/for-students/commendations', name: '始業式及び終業式の表彰について' },
           ],
         },
       ],

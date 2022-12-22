@@ -276,14 +276,6 @@
           </div>
         </Accordion>
         <Accordion>
-          <div slot="title">規制改革PT</div>
-          <div slot="content">
-            <p>
-              規制改革PTは、灘校に存在する、特に職員室から生徒に向けて発せられている、諸々の明文化された規則及び不文律について、その妥当性などを検討し、適宜改革を求める機関です。
-            </p>
-          </div>
-        </Accordion>
-        <Accordion>
           <div slot="title">食堂PT</div>
           <div slot="content">
             <p>

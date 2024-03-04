@@ -79,9 +79,7 @@
                 体育委員長は高校１年及び高校２年の生徒会員から選挙されます。
               </p>
               <p>
-                <a href="https://athlete.nada-sc.jp/" target="_blank"
-                  >体育祭HPはこちら</a
-                >
+                <a href="https://athlete.nada-sc.jp/" target="_blank">体育祭HPはこちら</a>
               </p>
             </div>
           </Accordion>
@@ -95,9 +93,7 @@
                 文化委員長は高校１年及び高校２年の生徒会員から選挙されます。
               </p>
               <p>
-                <a href="https://fest.nada-sc.jp" target="_blank"
-                  >文化祭HPはこちら</a
-                >
+                <a href="https://fest.nada-sc.jp" target="_blank">文化祭HPはこちら</a>
               </p>
             </div>
           </Accordion>
@@ -109,10 +105,13 @@
         <h2>評議会</h2>
         <div class="introduction">
           <p>
-            評議会は生徒会の最高機関かつ唯一の議決機関で、各クラスから２名ずつ選出された評議員から構成されています。各クラスの評議員は互選により首席評議員を選出します。
+            評議会は生徒会の最高機関かつ唯一の議決機関です。予算案の承認、演説の聴取や規則の制定などをするのが主な役割です。
           </p>
           <p>
-            さらに、評議員から議長・副議長・理事が選出されます。首席評議員と議長は兼任できません。予算案の承認や規則案の議決などをするのが主な役割です。
+            評議員は、各クラスから２名ずつ選挙されています。各クラスの評議員は互選により首席評議員を選びます。また、各評議員は、１つ以上の常任委員会に所属して活動します。
+          </p>
+          <p>
+            さらに、評議員から議長・副議長が選出されます。首席評議員と議長は兼任できません。
           </p>
         </div>
         <Accordion>
@@ -124,21 +123,26 @@
           </div>
         </Accordion>
         <Accordion>
-          <div slot="title">理事会</div>
-          <div slot="content">
-            <p>
-              理事会は、議長・副議長・理事から構成されています。評議会の運営に関する事項などの規則で定められた事項を決定するのが役割です。
-            </p>
-          </div>
-        </Accordion>
-        <Accordion>
           <div slot="title">委員会</div>
           <div slot="content">
             <p>
-              議案が提出されたとき、議長はその議案を審議するための委員会を設置してその議案を付託し、審議させます。ただし、必要なときは、議長は理事会の決定を経て、議案を直ちに本会議で審議することができます。
+              委員会は、議案が本会議で審議される前に専門的な審査を行うために設けられています。また、演説などの多くは委員会のみで行われます。
             </p>
             <p>
-              委員会は審議の経過及び委員会の統一的見解を記載した報告書を決議して本会議に提出し、委員長は報告書の要旨を本会議に報告しなければなりません。
+              委員会が議案の審査を終えたときは、審査経過の報告書を提出します。また、委員長による本会議での審査経過の説明も行います。
+            </p>
+            <p>
+              委員会には、常時設置されている常任委員会と必要に応じて設置される特別委員会があります。常任委員会は次の7つです。
+            </p>
+              ・総務常任委員会<br/>
+              ・会誌新聞常任委員会<br/>
+              ・会計常任委員会<br/>
+              ・中学常任委員会<br/>
+              ・体育常任委員会<br/>
+              ・文化常任委員会<br/>
+              ・評議会運営委員会<br/>
+            <p>
+              なお、必要なときは、議長は評議会運営委員会の同意を得て、委員会審査を省略することができます。
             </p>
           </div>
         </Accordion>
@@ -199,9 +203,7 @@
               デジタル委員会は生徒会内のデジタル業務をまとめて行う補助機関です。駅伝大会のホームページの作成や文化祭のホームページの作成、生徒会ホームページなどの、ホームページの維持、更新作業や、各生徒会、クラブのアカウントの管理、動画の撮影や編集、公開などを行います。
             </p>
             <p>
-              <a href="https://digital.nada-sc.jp" target="_blank"
-                >デジタル委員会HPはこちら</a
-              >
+              <a href="https://digital.nada-sc.jp" target="_blank">デジタル委員会HPはこちら</a>
             </p>
           </div>
         </Accordion>
@@ -287,6 +289,7 @@
     </transition>
   </div>
 </template>
+
 <script>
 export default {
   head() {
@@ -301,12 +304,14 @@ export default {
   },
 }
 </script>
+
 <style lang="scss" scoped>
 .midashi {
   font-weight: 500;
   text-align: center;
   margin-top: 2em;
   font-size: 1.7em;
+
   span {
     display: block;
     font-size: 0.5em;
@@ -316,11 +321,13 @@ export default {
 
 .sentence {
   margin: 0 5%;
+
   h2 {
     font-weight: 500;
     text-align: center;
     font-size: 1.5em;
   }
+
   h3 {
     text-align: center;
     font-weight: 400;
@@ -328,9 +335,11 @@ export default {
     margin-top: 2em;
     margin-bottom: 1em;
   }
+
   .introduction {
     line-height: 1.5;
     margin-top: 1em;
+
     p {
       margin-bottom: 0.5em;
       text-align: justify;
@@ -348,25 +357,30 @@ export default {
 // タブ
 nav.tabs {
   margin: 3em 5%;
+
   ul {
     display: flex;
     list-style: none;
     justify-content: space-around;
+
     li {
       width: 30vw;
       text-align: center;
       background-color: #000;
       color: #fff;
+
       button {
         width: 100%;
         padding: 10px 0;
       }
     }
+
     li.active {
       background-color: #666666;
     }
   }
 }
+
 // タブ切り替えアニメーション
 .v-enter-from,
 .v-leave-to {
@@ -387,6 +401,7 @@ nav.tabs {
   .sentence {
     margin: 0 25%;
   }
+
   nav.tabs {
     margin: 3em 25%;
   }

@@ -61,22 +61,6 @@
         ></Block>
       </div>
     </section>
-    <section class="intro section-wrap">
-      <div class="heading">
-        <h2>校内生向け<span>For Students</span></h2>
-        <p>
-          灘校生に向けた連絡などを掲載します。
-        </p>
-      </div>
-      <div class="blocks">
-        <Block
-          color="#AF8A37"
-          title="始業式及び終業式の表彰について"
-          subtitle="Commendations in the Start-of-term and the End-of-term Assembly"
-          link="/for-students/commendations"
-        ></Block>
-      </div>
-    </section>
   </div>
 </template>
 <script>

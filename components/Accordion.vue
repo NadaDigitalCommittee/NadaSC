@@ -1,12 +1,12 @@
 <template>
   <div class="accordion">
     <div class="title" @click="open = !open">
-      <dt v-bind:class="{ isopen: open }">
+      <dt :class="{ isopen: open }">
         <slot name="title"></slot>
       </dt>
     </div>
     <transition name="open">
-      <div class="accordion-content" v-show="open">
+      <div v-show="open" class="accordion-content">
         <dd>
           <slot name="content"></slot>
         </dd>

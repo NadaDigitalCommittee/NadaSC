@@ -65,12 +65,12 @@
 </template>
 <script>
 export default {
+  layout: 'indexpage',
   head() {
     return {
       title: 'トップページ',
     }
   },
-  layout: 'indexpage',
   mounted() {
     const setFillHeight = () => {
       const vh = window.innerHeight * 0.01

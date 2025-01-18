@@ -1,7 +1,7 @@
 <template>
   <div class="main">
-    <nav v-bind:class="{ active: open }">
-      <div class="group" v-for="item in phonemenuitems" :key="item.name">
+    <nav :class="{ active: open }">
+      <div v-for="item in phonemenuitems" :key="item.name" class="group">
         <nuxt-link :to="item.url" @click.native="open = !open"
           >{{ item.eng }}<span>{{ item.name }}</span></nuxt-link
         >
@@ -27,10 +27,10 @@
         </nuxt-link>
         <!-- ハンバーガーメニュー -->
         <button
-          class="menu-trigger"
           id="menu"
-          v-on:click="open = !open"
-          v-bind:class="{ active: open }"
+          class="menu-trigger"
+          :class="{ active: open }"
+          @:click="open = !open"
         >
           <span></span>
           <span></span>
@@ -45,14 +45,14 @@
               v-for="(item, index) in pcmenuitems"
               :key="item.url"
               class="parentlist"
-              v-on:mouseover="mouseover(index)"
-              v-on:mouseleave="mouseleave(index)"
+              @:mouseover="mouseover(index)"
+              @:mouseleave="mouseleave(index)"
             >
               <nuxt-link :to="item.url">{{ item.name }}</nuxt-link>
               <transition>
                 <ul
-                  class="dropdown"
                   v-show="pcmenuopen && index === hoverindex"
+                  class="dropdown"
                 >
                   <li v-for="child in item.children" :key="child.name">
                     <nuxt-link :to="child.url">{{ child.name }}</nuxt-link>
@@ -101,7 +101,10 @@ export default {
           eng: 'For Students',
           name: '校内生向け',
           children: [
-            { url: '/for-students/commendations', name: '始業式及び終業式の表彰について' },
+            {
+              url: '/for-students/commendations',
+              name: '始業式及び終業式の表彰について',
+            },
           ],
         },
       ],
@@ -126,15 +129,6 @@ export default {
       ],
     }
   },
-  methods: {
-    mouseover(index) {
-      this.pcmenuopen = true
-      this.hoverindex = index
-    },
-    mouseleave() {
-      this.pcmenuopen = false
-    },
-  },
   mounted() {
     // スマホで見たときに100vhを指定してもはみ出さないようにする
     function setHeight() {
@@ -146,9 +140,17 @@ export default {
 
     window.addEventListener('resize', setHeight)
   },
+  methods: {
+    mouseover(index) {
+      this.pcmenuopen = true
+      this.hoverindex = index
+    },
+    mouseleave() {
+      this.pcmenuopen = false
+    },
+  },
 }
 </script>
-
 
 <style lang="scss" scoped>
 // ハンバーガーメニューのcssは別途記述

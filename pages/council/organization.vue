@@ -3,19 +3,19 @@
     <h1 class="midashi">生徒会機関<span>Student Council Organization</span></h1>
     <nav class="tabs">
       <ul>
-        <li v-bind:class="{ active: tabnum == 1 }">
+        <li :class="{ active: tabnum == 1 }">
           <button @click="tabnum = 1">中央委員会</button>
         </li>
-        <li v-bind:class="{ active: tabnum == 2 }">
+        <li :class="{ active: tabnum == 2 }">
           <button @click="tabnum = 2">評議会</button>
         </li>
-        <li v-bind:class="{ active: tabnum == 3 }">
+        <li :class="{ active: tabnum == 3 }">
           <button @click="tabnum = 3">その他機関</button>
         </li>
       </ul>
     </nav>
     <transition>
-      <section class="central sentence" v-show="tabnum == 1">
+      <section v-show="tabnum == 1" class="central sentence">
         <h2>中央委員会</h2>
         <div class="introduction">
           <p>
@@ -79,7 +79,9 @@
                 体育委員長は高校１年及び高校２年の生徒会員から選挙されます。
               </p>
               <p>
-                <a href="https://athlete.nada-sc.jp/" target="_blank">体育祭HPはこちら</a>
+                <a href="https://athlete.nada-sc.jp/" target="_blank"
+                  >体育祭HPはこちら</a
+                >
               </p>
             </template>
           </Accordion>
@@ -93,7 +95,9 @@
                 文化委員長は高校１年及び高校２年の生徒会員から選挙されます。
               </p>
               <p>
-                <a href="https://fest.nada-sc.jp" target="_blank">文化祭HPはこちら</a>
+                <a href="https://fest.nada-sc.jp" target="_blank"
+                  >文化祭HPはこちら</a
+                >
               </p>
             </template>
           </Accordion>
@@ -101,7 +105,7 @@
       </section>
     </transition>
     <transition>
-      <section class="parliament sentence" v-show="tabnum == 2">
+      <section v-show="tabnum == 2" class="parliament sentence">
         <h2>評議会</h2>
         <div class="introduction">
           <p>
@@ -134,13 +138,13 @@
             <p>
               委員会には、常時設置されている常任委員会と必要に応じて設置される特別委員会があります。常任委員会は次の7つです。
             </p>
-              ・総務常任委員会<br/>
-              ・会誌新聞常任委員会<br/>
-              ・会計常任委員会<br/>
-              ・中学常任委員会<br/>
-              ・体育常任委員会<br/>
-              ・文化常任委員会<br/>
-              ・評議会運営委員会<br/>
+            ・総務常任委員会<br />
+            ・会誌新聞常任委員会<br />
+            ・会計常任委員会<br />
+            ・中学常任委員会<br />
+            ・体育常任委員会<br />
+            ・文化常任委員会<br />
+            ・評議会運営委員会<br />
             <p>
               なお、必要なときは、議長は評議会運営委員会の同意を得て、委員会審査を省略することができます。
             </p>
@@ -176,7 +180,7 @@
       </section>
     </transition>
     <transition>
-      <section class="assist sentence" v-show="tabnum == 3">
+      <section v-show="tabnum == 3" class="assist sentence">
         <!-- <h2>新聞委員会</h2> -->
         <Accordion>
           <template #title>新聞委員会</template>
@@ -203,7 +207,9 @@
               デジタル委員会は生徒会内のデジタル業務をまとめて行う補助機関です。駅伝大会のホームページの作成や文化祭のホームページの作成、生徒会ホームページなどの、ホームページの維持、更新作業や、各生徒会、クラブのアカウントの管理、動画の撮影や編集、公開などを行います。
             </p>
             <p>
-              <a href="https://digital.nada-sc.jp" target="_blank">デジタル委員会HPはこちら</a>
+              <a href="https://digital.nada-sc.jp" target="_blank"
+                >デジタル委員会HPはこちら</a
+              >
             </p>
           </template>
         </Accordion>
@@ -292,14 +298,14 @@
 
 <script>
 export default {
-  head() {
-    return {
-      title: '生徒会機関',
-    }
-  },
   data() {
     return {
       tabnum: 1,
+    }
+  },
+  head() {
+    return {
+      title: '生徒会機関',
     }
   },
 }

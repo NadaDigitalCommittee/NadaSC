@@ -2,7 +2,7 @@
   <div>
     <footer>
       <nuxt-link to="/" class="footer-topimg">
-        <img src="@/assets/img/nada-reverse.png" alt="topimg" />
+        <nuxt-img src="nada-reverse.png" alt="topimg" />
         <h1 class="midashi">灘校生徒会</h1>
       </nuxt-link>
       <div class="links">

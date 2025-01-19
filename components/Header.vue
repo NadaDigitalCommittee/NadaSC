@@ -21,7 +21,7 @@
       <div class="inside-header">
         <nuxt-link to="/">
           <div class="imgwrapper">
-            <!-- <img src="@/assets/img/nada.png" alt="topimg" /> -->
+            <!-- <nuxt-img src="nada.png" alt="topimg" /> -->
           </div>
           <h1>灘校生徒会</h1>
         </nuxt-link>
@@ -68,6 +68,8 @@
   </div>
 </template>
 <script setup lang="ts">
+const img = useImage()
+const nadaPngIpxUrl = ref(`url(${img('nada.png')})`)
 
 const isopen = ref(false)
 const open = ref(false)
@@ -168,7 +170,7 @@ const mouseleave = (index: number) => {
     width: 15vw;
     height: 15vw;
     margin-right: 10px;
-    background-image: url('@/assets/img/nada.png');
+    background-image: v-bind(nadaPngIpxUrl);
     background-size: 15vw 15vw;
     background-position: center center;
     background-repeat: no-repeat;

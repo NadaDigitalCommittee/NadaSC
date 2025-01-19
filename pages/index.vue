@@ -64,6 +64,12 @@
   </div>
 </template>
 <script setup lang="ts">
+const img = useImage()
+const nadaPngIpxUrl = ref(`url(${img('nada.png')})`)
+const nadaReversePngIpxUrl = ref(`url(${img('nada-reverse.png')})`)
+const topimgJpgIpxUrl = ref(`url(${img('topimg.JPG', { rotate: null })})`)
+const topimgPcJpgIpxUrl = ref(`url(${img('topimgpc.JPG')})`)
+
 definePageMeta({
   layout: 'indexpage',
 })
@@ -94,7 +100,7 @@ onMounted(() => {
   }
 
   .imgwrapper {
-    background-image: url('@/assets/img/nada-reverse.png');
+    background-image: v-bind(nadaReversePngIpxUrl);
     background-size: 15vw 15vw;
     background-position: center center;
     background-repeat: no-repeat;
@@ -118,7 +124,7 @@ onMounted(() => {
         width: 3.3em;
         height: 3.3em;
         background-size: 3.3em 3.3em;
-        background-image: url('@/assets/img/nada.png');
+        background-image: v-bind(nadaPngIpxUrl);
       }
     }
   }
@@ -134,7 +140,7 @@ onMounted(() => {
 .topimg {
   width: 100%;
   height: 100%;
-  background-image: url('@/assets/img/topimg.JPG');
+  background-image: v-bind(topimgJpgIpxUrl);
 
   background-size: cover;
 }
@@ -220,7 +226,7 @@ onMounted(() => {
 // PC版
 @media screen and (min-width: 960px) {
   .topimg {
-    background-image: url('@/assets/img/topimgpc.JPG');
+    background-image: v-bind(topimgPcJpgIpxUrl);
   }
   .intro {
     display: flex;

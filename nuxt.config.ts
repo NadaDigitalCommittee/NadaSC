@@ -40,21 +40,18 @@ export default defineNuxtConfig({
 
   components: true,
 
-  modules: [
-    '@nuxtjs/eslint-module',
-    '@nuxt/image',
-  ],
+  modules: ['@nuxtjs/eslint-module', '@nuxt/image'],
 
   image: {
-    provider: "ipx",
+    provider: 'ipx',
     dir: 'assets/img',
     ipx: {
       modifiers: {
         // https://stackoverflow.com/a/77632807
         // ExifのOrientationを考慮する
-        rotate: null!
-      }
-    }
+        rotate: null!,
+      },
+    },
   },
 
   build: {

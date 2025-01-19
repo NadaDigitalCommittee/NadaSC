@@ -42,7 +42,7 @@ html {
 
 .page-enter-active,
 .page-leave-active {
-  transition: opacity .4s;
+  transition: opacity 0.4s;
 }
 
 .layout-enter,
@@ -52,5 +52,5 @@ html {
 
 .layout-enter-active,
 .layout-leave-active {
-  transition: opacity .4s;
+  transition: opacity 0.4s;
 }

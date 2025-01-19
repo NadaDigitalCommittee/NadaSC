@@ -95,17 +95,6 @@ const phonemenuitems = ref([
       { url: '/school/facilities', name: '学校設備' },
     ],
   },
-  {
-    url: '/for-students',
-    eng: 'For Students',
-    name: '校内生向け',
-    children: [
-      {
-        url: '/for-students/commendations',
-        name: '始業式及び終業式の表彰について',
-      },
-    ],
-  },
 ])
 const pcmenuitems = ref([
   {

@@ -151,7 +151,7 @@ const mouseleave = (index: number) => {
 
 <style lang="scss" scoped>
 // ハンバーガーメニューのcssは別途記述
-@import '@/assets/css/hamburger.scss';
+@use '@/assets/css/hamburger.scss';
 
 .header {
   margin: 20px 5%;

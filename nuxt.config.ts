@@ -40,7 +40,7 @@ export default defineNuxtConfig({
 
   components: true,
 
-  modules: ['@nuxtjs/eslint-module', '@nuxt/image'],
+  modules: ['@nuxt/image', '@nuxt/eslint'],
 
   image: {
     provider: 'ipx',

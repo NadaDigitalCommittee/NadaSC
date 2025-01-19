@@ -1,8 +1,8 @@
 <template>
   <div class="main">
-    <nav :class="{ active: open }">
+    <nav :class="{ active: isopen }">
       <div v-for="item in phonemenuitems" :key="item.name" class="group">
-        <nuxt-link :to="item.url" @click.native="open = !open"
+        <nuxt-link :to="item.url" @click="isopen = !isopen"
           >{{ item.eng }}<span>{{ item.name }}</span></nuxt-link
         >
         <nuxt-link
@@ -10,7 +10,7 @@
           :key="child.name"
           tag="li"
           :to="child.url"
-          @click.native="open = !open"
+          @click="isopen = !isopen"
           >{{ child.name }}</nuxt-link
         >
       </div>
@@ -29,8 +29,8 @@
         <button
           id="menu"
           class="menu-trigger"
-          :class="{ active: open }"
-          @:click="open = !open"
+          :class="{ active: isopen }"
+          @:click="isopen = !isopen"
         >
           <span></span>
           <span></span>
@@ -72,7 +72,6 @@ const img = useImage()
 const nadaPngIpxUrl = ref(`url(${img('nada.png')})`)
 
 const isopen = ref(false)
-const open = ref(false)
 const pcmenuopen = ref(false)
 const hoverindex = ref<number | null>(null)
 const phonemenuitems = ref([
@@ -144,7 +143,7 @@ const mouseover = (index: number) => {
   pcmenuopen.value = true
   hoverindex.value = index
 }
-const mouseleave = (index: number) => {
+const mouseleave = (_index: number) => {
   pcmenuopen.value = false
 }
 </script>

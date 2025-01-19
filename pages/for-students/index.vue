@@ -3,14 +3,10 @@
     <h1 class="midashi">校内生向け<span>For Students</span></h1>
   </div>
 </template>
-<script>
-export default {
-  head() {
-    return {
-      title: '表彰',
-    }
-  },
-}
+<script setup lang="ts">
+useHead({
+  title: '表彰',
+})
 </script>
 
 <style lang="scss" scoped>

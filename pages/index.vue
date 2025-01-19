@@ -63,24 +63,24 @@
     </section>
   </div>
 </template>
-<script>
-export default {
+<script setup lang="ts">
+definePageMeta({
   layout: 'indexpage',
-  head() {
-    return {
-      title: 'トップページ',
-    }
-  },
-  mounted() {
-    const setFillHeight = () => {
-      const vh = window.innerHeight * 0.01
-      document.documentElement.style.setProperty('--vh', `${vh}px`)
-    }
+})
 
-    // 初期化
-    setFillHeight()
-  },
-}
+useHead({
+  title: 'トップページ',
+})
+
+onMounted(() => {
+  const setFillHeight = () => {
+    const vh = window.innerHeight * 0.01
+    document.documentElement.style.setProperty('--vh', `${vh}px`)
+  }
+
+  // 初期化
+  setFillHeight()
+})
 </script>
 <style lang="scss" scoped>
 ::v-deep .main .header {

@@ -296,19 +296,12 @@
   </div>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      tabnum: 1,
-    }
-  },
-  head() {
-    return {
-      title: '生徒会機関',
-    }
-  },
-}
+<script setup lang="ts">
+const tabnum = ref(1)
+
+useHead({
+  title: '生徒会機関',
+})
 </script>
 
 <style lang="scss" scoped>

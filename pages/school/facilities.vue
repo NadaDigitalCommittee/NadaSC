@@ -183,14 +183,10 @@
     </section>
   </div>
 </template>
-<script>
-export default {
-  head() {
-    return {
-      title: '学校設備',
-    }
-  },
-}
+<script setup lang="ts">
+useHead({
+  title: '学校設備',
+})
 </script>
 <style lang="scss" scoped>
 .midashi {

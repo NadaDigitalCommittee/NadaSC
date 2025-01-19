@@ -14,14 +14,8 @@
     </transition>
   </div>
 </template>
-<script>
-export default {
-  data() {
-    return {
-      open: false,
-    }
-  },
-}
+<script setup lang="ts">
+const open = ref(false)
 </script>
 <style lang="scss" scoped>
 .accordion {

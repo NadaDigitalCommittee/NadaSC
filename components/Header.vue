@@ -67,88 +67,83 @@
     </div>
   </div>
 </template>
-<script>
-export default {
-  data() {
-    return {
-      isopen: false,
-      open: false,
-      pcmenuopen: false,
-      hoverindex: null,
-      phonemenuitems: [
-        { url: '/', eng: 'Top', name: 'トップページ' },
-        {
-          url: '/council',
-          eng: 'Student Council',
-          name: '生徒会紹介',
-          children: [
-            { url: '/council/structure', name: '生徒会構造図' },
-            { url: '/council/organization', name: '生徒会機関' },
-            { url: '/council/rules', name: '生徒会規則' },
-          ],
-        },
-        {
-          url: '/school',
-          eng: 'School',
-          name: '学校紹介',
-          children: [
-            { url: '/school/events', name: '年間行事' },
-            { url: '/school/facilities', name: '学校設備' },
-          ],
-        },
-        {
-          url: '/for-students',
-          eng: 'For Students',
-          name: '校内生向け',
-          children: [
-            {
-              url: '/for-students/commendations',
-              name: '始業式及び終業式の表彰について',
-            },
-          ],
-        },
-      ],
-      pcmenuitems: [
-        {
-          url: '/council',
-          name: '生徒会紹介',
-          children: [
-            { url: '/council/organization', name: '生徒会機関' },
-            { url: '/council/rules', name: '生徒会規則' },
-            { url: '/council/structure', name: '生徒会構造図' },
-          ],
-        },
-        {
-          url: '/school',
-          name: '学校紹介',
-          children: [
-            { url: '/school/events', name: '年間行事' },
-            { url: '/school/facilities', name: '学校設備' },
-          ],
-        },
-      ],
-    }
-  },
-  mounted() {
-    // スマホで見たときに100vhを指定してもはみ出さないようにする
-    function setHeight() {
-      const vh = window.innerHeight * 0.01
-      document.documentElement.style.setProperty('--vh', `${vh}px`)
-    }
+<script setup lang="ts">
 
-    setHeight()
+const isopen = ref(false)
+const open = ref(false)
+const pcmenuopen = ref(false)
+const hoverindex = ref<number | null>(null)
+const phonemenuitems = ref([
+  { url: '/', eng: 'Top', name: 'トップページ' },
+  {
+    url: '/council',
+    eng: 'Student Council',
+    name: '生徒会紹介',
+    children: [
+      { url: '/council/structure', name: '生徒会構造図' },
+      { url: '/council/organization', name: '生徒会機関' },
+      { url: '/council/rules', name: '生徒会規則' },
+    ],
+  },
+  {
+    url: '/school',
+    eng: 'School',
+    name: '学校紹介',
+    children: [
+      { url: '/school/events', name: '年間行事' },
+      { url: '/school/facilities', name: '学校設備' },
+    ],
+  },
+  {
+    url: '/for-students',
+    eng: 'For Students',
+    name: '校内生向け',
+    children: [
+      {
+        url: '/for-students/commendations',
+        name: '始業式及び終業式の表彰について',
+      },
+    ],
+  },
+])
+const pcmenuitems = ref([
+  {
+    url: '/council',
+    name: '生徒会紹介',
+    children: [
+      { url: '/council/organization', name: '生徒会機関' },
+      { url: '/council/rules', name: '生徒会規則' },
+      { url: '/council/structure', name: '生徒会構造図' },
+    ],
+  },
+  {
+    url: '/school',
+    name: '学校紹介',
+    children: [
+      { url: '/school/events', name: '年間行事' },
+      { url: '/school/facilities', name: '学校設備' },
+    ],
+  },
+])
 
-    window.addEventListener('resize', setHeight)
-  },
-  methods: {
-    mouseover(index) {
-      this.pcmenuopen = true
-      this.hoverindex = index
-    },
-    mouseleave() {
-      this.pcmenuopen = false
-    },
-  },
+onMounted(() => {
+  // スマホで見たときに100vhを指定してもはみ出さないようにする
+  function setHeight() {
+    const vh = window.innerHeight * 0.01
+    document.documentElement.style.setProperty('--vh', `${vh}px`)
+  }
+
+  setHeight()
+
+  window.addEventListener('resize', setHeight)
+})
+
+const mouseover = (index: number) => {
+  pcmenuopen.value = true
+  hoverindex.value = index
+}
+const mouseleave = (index: number) => {
+  pcmenuopen.value = false
 }
 </script>
 

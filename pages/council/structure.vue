@@ -5,14 +5,10 @@
     <img src="@/assets/img/structure.jpg" alt="" />
   </div>
 </template>
-<script>
-export default {
-  head() {
-    return {
-      title: '生徒会構造図',
-    }
-  },
-}
+<script setup lang="ts">
+useHead({
+  title: '生徒会構造図',
+})
 </script>
 <style lang="scss" scoped>
 .midashi {

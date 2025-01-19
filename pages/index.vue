@@ -89,7 +89,7 @@ onMounted(() => {
 })
 </script>
 <style lang="scss" scoped>
-::v-deep .main .header {
+:deep(.main .header) {
   height: 100vh;
   margin-bottom: 0;
   margin-top: 0;
@@ -149,7 +149,7 @@ onMounted(() => {
   .hero {
     height: -webkit-fill-available;
   }
-  ::v-deep .main .header {
+  :deep(.main .header) {
     height: -webkit-fill-available;
   }
 }

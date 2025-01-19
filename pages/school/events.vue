@@ -175,14 +175,10 @@
     </section>
   </div>
 </template>
-<script>
-export default {
-  head() {
-    return {
-      title: '年間行事',
-    }
-  },
-}
+<script setup lang="ts">
+useHead({
+  title: '年間行事',
+})
 </script>
 <style lang="scss" scoped>
 .midashi {

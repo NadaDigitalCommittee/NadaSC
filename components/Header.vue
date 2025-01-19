@@ -1,8 +1,8 @@
 <template>
   <div class="main">
-    <nav v-bind:class="{ active: open }">
-      <div class="group" v-for="item in phonemenuitems" :key="item.name">
-        <nuxt-link :to="item.url" @click.native="open = !open"
+    <nav :class="{ active: isopen }">
+      <div v-for="item in phonemenuitems" :key="item.name" class="group">
+        <nuxt-link :to="item.url" @click="isopen = !isopen"
           >{{ item.eng }}<span>{{ item.name }}</span></nuxt-link
         >
         <nuxt-link
@@ -10,7 +10,7 @@
           :key="child.name"
           tag="li"
           :to="child.url"
-          @click.native="open = !open"
+          @click="isopen = !isopen"
           >{{ child.name }}</nuxt-link
         >
       </div>
@@ -21,16 +21,16 @@
       <div class="inside-header">
         <nuxt-link to="/">
           <div class="imgwrapper">
-            <!-- <img src="@/assets/img/nada.png" alt="topimg" /> -->
+            <!-- <nuxt-img src="nada.png" alt="topimg" /> -->
           </div>
           <h1>灘校生徒会</h1>
         </nuxt-link>
         <!-- ハンバーガーメニュー -->
         <button
-          class="menu-trigger"
           id="menu"
-          v-on:click="open = !open"
-          v-bind:class="{ active: open }"
+          class="menu-trigger"
+          :class="{ active: isopen }"
+          @:click="isopen = !isopen"
         >
           <span></span>
           <span></span>
@@ -45,14 +45,14 @@
               v-for="(item, index) in pcmenuitems"
               :key="item.url"
               class="parentlist"
-              v-on:mouseover="mouseover(index)"
-              v-on:mouseleave="mouseleave(index)"
+              @:mouseover="mouseover(index)"
+              @:mouseleave="mouseleave(index)"
             >
               <nuxt-link :to="item.url">{{ item.name }}</nuxt-link>
               <transition>
                 <ul
-                  class="dropdown"
                   v-show="pcmenuopen && index === hoverindex"
+                  class="dropdown"
                 >
                   <li v-for="child in item.children" :key="child.name">
                     <nuxt-link :to="child.url">{{ child.name }}</nuxt-link>
@@ -67,84 +67,79 @@
     </div>
   </div>
 </template>
-<script>
-export default {
-  data() {
-    return {
-      isopen: false,
-      open: false,
-      pcmenuopen: false,
-      hoverindex: null,
-      phonemenuitems: [
-        { url: '/', eng: 'Top', name: 'トップページ' },
-        {
-          url: '/council',
-          eng: 'Student Council',
-          name: '生徒会紹介',
-          children: [
-            { url: '/council/structure', name: '生徒会構造図' },
-            { url: '/council/organization', name: '生徒会機関' },
-            { url: '/council/rules', name: '生徒会規則' },
-          ],
-        },
-        {
-          url: '/school',
-          eng: 'School',
-          name: '学校紹介',
-          children: [
-            { url: '/school/events', name: '年間行事' },
-            { url: '/school/facilities', name: '学校設備' },
-          ],
-        },
-      ],
-      pcmenuitems: [
-        {
-          url: '/council',
-          name: '生徒会紹介',
-          children: [
-            { url: '/council/organization', name: '生徒会機関' },
-            { url: '/council/rules', name: '生徒会規則' },
-            { url: '/council/structure', name: '生徒会構造図' },
-          ],
-        },
-        {
-          url: '/school',
-          name: '学校紹介',
-          children: [
-            { url: '/school/events', name: '年間行事' },
-            { url: '/school/facilities', name: '学校設備' },
-          ],
-        },
-      ],
-    }
-  },
-  methods: {
-    mouseover(index) {
-      this.pcmenuopen = true
-      this.hoverindex = index
-    },
-    mouseleave() {
-      this.pcmenuopen = false
-    },
-  },
-  mounted() {
-    // スマホで見たときに100vhを指定してもはみ出さないようにする
-    function setHeight() {
-      const vh = window.innerHeight * 0.01
-      document.documentElement.style.setProperty('--vh', `${vh}px`)
-    }
+<script setup lang="ts">
+const img = useImage()
+const nadaPngIpxUrl = ref(`url(${img('nada.png')})`)
 
-    setHeight()
-
-    window.addEventListener('resize', setHeight)
+const isopen = ref(false)
+const pcmenuopen = ref(false)
+const hoverindex = ref<number | null>(null)
+const phonemenuitems = ref([
+  { url: '/', eng: 'Top', name: 'トップページ' },
+  {
+    url: '/council',
+    eng: 'Student Council',
+    name: '生徒会紹介',
+    children: [
+      { url: '/council/structure', name: '生徒会構造図' },
+      { url: '/council/organization', name: '生徒会機関' },
+      { url: '/council/rules', name: '生徒会規則' },
+    ],
   },
+  {
+    url: '/school',
+    eng: 'School',
+    name: '学校紹介',
+    children: [
+      { url: '/school/events', name: '年間行事' },
+      { url: '/school/facilities', name: '学校設備' },
+    ],
+  },
+])
+const pcmenuitems = ref([
+  {
+    url: '/council',
+    name: '生徒会紹介',
+    children: [
+      { url: '/council/organization', name: '生徒会機関' },
+      { url: '/council/rules', name: '生徒会規則' },
+      { url: '/council/structure', name: '生徒会構造図' },
+    ],
+  },
+  {
+    url: '/school',
+    name: '学校紹介',
+    children: [
+      { url: '/school/events', name: '年間行事' },
+      { url: '/school/facilities', name: '学校設備' },
+    ],
+  },
+])
+
+onMounted(() => {
+  // スマホで見たときに100vhを指定してもはみ出さないようにする
+  function setHeight() {
+    const vh = window.innerHeight * 0.01
+    document.documentElement.style.setProperty('--vh', `${vh}px`)
+  }
+
+  setHeight()
+
+  window.addEventListener('resize', setHeight)
+})
+
+const mouseover = (index: number) => {
+  pcmenuopen.value = true
+  hoverindex.value = index
+}
+const mouseleave = (_index: number) => {
+  pcmenuopen.value = false
 }
 </script>
 
-
 <style lang="scss" scoped>
 // ハンバーガーメニューのcssは別途記述
-@import '@/assets/css/hamburger.scss';
+@use '@/assets/css/hamburger.scss';
 
 .header {
   margin: 20px 5%;
@@ -163,7 +158,7 @@ export default {
     width: 15vw;
     height: 15vw;
     margin-right: 10px;
-    background-image: url('@/assets/img/nada.png');
+    background-image: v-bind(nadaPngIpxUrl);
     background-size: 15vw 15vw;
     background-position: center center;
     background-repeat: no-repeat;

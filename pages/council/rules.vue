@@ -42,9 +42,7 @@
           HTML版は、Webで直接閲覧することができるものです。PDF版では文字をコピーするときに上手くできないことがありますが、HTML版ではほぼ確実に正確なコピーをすることができます。
           ただし、HTML版の更新作業はほかの２版よりも遅れて行われる可能性が高いです。注意してご利用ください。
         </p>
-        <a
-          class="links"
-          href="https://rules.nada-sc.jp"
+        <a class="links" href="https://rules.nada-sc.jp"
           >[リンク]灘校規約規則集HTML版</a
         >
         <li>PDF版</li>
@@ -64,14 +62,10 @@
     </section>
   </div>
 </template>
-<script>
-export default {
-  head() {
-    return {
-      title: '生徒会規則',
-    }
-  },
-}
+<script setup lang="ts">
+useHead({
+  title: '生徒会規則',
+})
 </script>
 <style lang="scss" scoped>
 .main {

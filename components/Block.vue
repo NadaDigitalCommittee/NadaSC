@@ -5,35 +5,30 @@
     >
   </div>
 </template>
-<script>
-export default {
-  props: {
-    color: {
-      type: String,
-      required: true,
-      default: 'black',
-    },
-    title: {
-      type: String,
-      required: true,
-    },
-    subtitle: {
-      type: String,
-      required: true,
-    },
-    link: {
-      type: String,
-      required: true,
-    },
+<script setup lang="ts">
+const props = defineProps({
+  color: {
+    type: String,
+    required: true,
+    default: 'black',
   },
-  computed: {
-    componentcolor() {
-      return {
-        '--background-color': this.color,
-      }
-    },
+  title: {
+    type: String,
+    required: true,
   },
-}
+  subtitle: {
+    type: String,
+    required: true,
+  },
+  link: {
+    type: String,
+    required: true,
+  },
+})
+
+const componentcolor = computed(() => ({
+  '--background-color': props.color,
+}))
 </script>
 <style lang="scss">
 .block {
@@ -56,7 +51,7 @@ export default {
   }
 }
 @media screen and (min-width: 960px) {
-  .block{
+  .block {
     width: 100%;
     margin: 0;
   }

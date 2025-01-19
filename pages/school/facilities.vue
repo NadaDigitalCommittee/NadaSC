@@ -3,7 +3,7 @@
     <h1 class="midashi">学校設備<span>School Facilities</span></h1>
     <section>
       <h2>3号館</h2>
-      <img src="@/assets/img/facilities/building3.jpg" alt="3号館" />
+      <nuxt-img src="facilities/building3.jpg" alt="3号館" loading="lazy" />
       <p>
         3号館は、2011~13年の改修工事で新築された、1号館と2号館を繋いでいる校舎です(西館と1号館の1階のPC教室、2階の校長室、3階の第2社会科教室・理科講義室を含めて3号館と呼ぶこともあります)。
       </p>
@@ -16,7 +16,7 @@
     </section>
     <section>
       <h2>プール</h2>
-      <img src="@/assets/img/facilities/pool.jpg" alt="プール" />
+      <nuxt-img src="facilities/pool.jpg" alt="プール" loading="lazy" />
       <p>
         灘校のプールは中学等の南東、高校等の北東に位置しています。6つのレーンを持つ25mのプールで最深部は1.36mとなっています。主に水泳部の活動場所として使われていますが、夏には一般生徒も体育の授業の一環として使用しています。
       </p>
@@ -26,7 +26,11 @@
     </section>
     <section>
       <h2>研修館</h2>
-      <img src="@/assets/img/facilities/training_center.jpg" alt="研修館" />
+      <nuxt-img
+        src="facilities/training_center.jpg"
+        alt="研修館"
+        loading="lazy"
+      />
       <p>
         研修館は校舎の西側に位置し、西門を入って右手に見える建物です。魚崎駅から登校する人はよく目にすることになると思います。
       </p>
@@ -42,9 +46,10 @@
     </section>
     <section>
       <h2>硬式テニスコート</h2>
-      <img
-        src="@/assets/img/facilities/tennis_court.jpg"
+      <nuxt-img
+        src="facilities/tennis_court.jpg"
         alt="硬式テニスコート"
+        loading="lazy"
       />
       <p>
         硬式テニスコートは、体育館と国道２号線との間に位置しています（第二グラウンドに隣接する、軟式テニスコートとは異なります）。テニスコートは３面あり、硬式テニス部の活動場所となっています。2011～13年の校舎改修の際に人工芝となりました。
@@ -55,7 +60,7 @@
     </section>
     <section>
       <h2>高校棟</h2>
-      <img src="@/assets/img/facilities/building2.jpg" alt="２号館" />
+      <nuxt-img src="facilities/building2.jpg" alt="２号館" loading="lazy" />
       <p>
         高校棟（２号館）は、2002年に新設された建物です。正式名称は２号館ですが、高校生の教室が入っていることから高校棟と呼ばれています。新中庭からこの建物を見たとき、高校棟の１階の左に音楽室、右にトレーニングルームがあります。
       </p>
@@ -65,7 +70,7 @@
     </section>
     <section>
       <h2>食堂</h2>
-      <img src="@/assets/img/facilities/cafeteria.jpg" alt="食堂" />
+      <nuxt-img src="facilities/cafeteria.jpg" alt="食堂" loading="lazy" />
       <p>
         食堂は正門を入って左側の、東館の地下１階にあります。株式会社クールさんが運営してくださっており、日替わりのメニューが沢山あります。牛丼やきつねうどん、カツカレーなど豊富なメニューを楽しむことができます。
       </p>
@@ -75,14 +80,14 @@
     </section>
     <section>
       <h2>西館</h2>
-      <img src="@/assets/img/facilities/west_building.jpg" alt="西館" />
+      <nuxt-img src="facilities/west_building.jpg" alt="西館" loading="lazy" />
       <p>
         西館は、1997年に竣工した後に建て替えられ、3号館と一体化した現在の姿になりました。1階には柔道場があり、灘校創立にご尽力された嘉納治五郎先生直筆の「精力善用」と「自他共栄」があります。また、2階には大講義室、3階には生物教室と剣道場があります。
       </p>
     </section>
     <section>
       <h2>体育館</h2>
-      <img src="@/assets/img/facilities/gymnasium.jpg" alt="体育館" />
+      <nuxt-img src="facilities/gymnasium.jpg" alt="体育館" loading="lazy" />
       <p>
         正門を出てすぐ右に見える建物が体育館です。入学試験の合格発表をはじめ、始業式や高校卒業式、合唱コンクールなどの様々な行事や体育の授業で使用されています。普段の部活では入って右から、バスケットボール部、バレー部、バドミントン部が練習をしています。
       </p>
@@ -92,9 +97,10 @@
     </section>
     <section>
       <h2>新中庭・スクエア</h2>
-      <img
-        src="@/assets/img/facilities/new_courtyard_and_square.jpg"
+      <nuxt-img
+        src="facilities/new_courtyard_and_square.jpg"
         alt="新中庭・スクエア"
+        loading="lazy"
       />
       <p>
         新中庭・スクエアとは中学棟と高校棟の間にある庭のことです。この庭は扇形の大きな階段を挟んで１階部分と２階部分に分かれていて、１階部分を新中庭、２階部分をスクエアと言います。ここには、紅葉の美しいカイノキなど、たくさんの樹木が植えられています。秋にはとても綺麗な紅葉を見ることができます。
@@ -102,7 +108,7 @@
     </section>
     <section>
       <h2>東館</h2>
-      <img src="@/assets/img/facilities/east_building.jpg" alt="東館" />
+      <nuxt-img src="facilities/east_building.jpg" alt="東館" loading="lazy" />
       <p>
         東館は、正門を通ると左手に見える建物で、１号館と繋がっています。地下１階に食堂、１階に大会議室と技術教室と美術教室、２階に視聴覚教室、ICT教室があります。特に、視聴覚教室は、映像を使った授業や、外部からの講師を招いて行う講義、説明会などで、頻繁に利用されます。
       </p>
@@ -110,7 +116,7 @@
     </section>
     <section>
       <h2>中学棟</h2>
-      <img src="@/assets/img/facilities/building1.jpg" alt="中学棟" />
+      <nuxt-img src="facilities/building1.jpg" alt="中学棟" loading="lazy" />
       <p>
         今の中学棟は、1938年の火災で焼失した昔の校舎の代わりに作られました。当時としては最高級の鉄筋コンクリートが使われていたため、阪神・淡路大震災でも倒壊することなく、現在もその姿を残しています。この棟の正式名称は１号館ですが、中学校の教室が棟内に入っているため、「中学棟」と呼ばれています。
       </p>
@@ -123,7 +129,7 @@
     </section>
     <section>
       <h2>中庭</h2>
-      <img src="@/assets/img/facilities/courtyard.jpg" alt="中庭" />
+      <nuxt-img src="facilities/courtyard.jpg" alt="中庭" loading="lazy" />
       <p>
         中庭は、本館と中学棟、東館に囲まれて立地しています。校内で唯一天然芝が施されています。（ほとんど芝生が生えていないところもありますが…）校内では１番、野村ドームをきれいに拝むことができる非常にありがたい場所にもなっています。
       </p>
@@ -133,7 +139,11 @@
     </section>
     <section>
       <h2>第１グラウンド</h2>
-      <img src="@/assets/img/facilities/1st_ground.jpg" alt="第１グラウンド" />
+      <nuxt-img
+        src="facilities/1st_ground.jpg"
+        alt="第１グラウンド"
+        loading="lazy"
+      />
       <p>
         高校棟南側にある大きなグラウンドが第１グラウンドです。中学や高校のグラウンドとしては珍しい人工芝の自慢のグラウンドです。普段は体育の授業で使われ、放課後には野球部やソフトボール同好会が活動しています。そのため、ブルペンやマウンド等の野球用設備も整っています。
       </p>
@@ -143,7 +153,11 @@
     </section>
     <section>
       <h2>第２グラウンド</h2>
-      <img src="@/assets/img/facilities/2nd_ground.jpg" alt="第２グラウンド" />
+      <nuxt-img
+        src="facilities/2nd_ground.jpg"
+        alt="第２グラウンド"
+        loading="lazy"
+      />
       <p>
         学校の最も東に位置する第２グラウンドは、サッカーコート１面分の広さがあります。第１グラウンド同様に全面が人工芝で、トイレもあります。体育の授業では、サッカーのときに利用し、放課後には陸上競技部、サッカー部、ラグビー部が練習しています。また、軟式テニスコートにもつながっています。
       </p>
@@ -153,7 +167,7 @@
     </section>
     <section>
       <h2>図書館</h2>
-      <img src="@/assets/img/facilities/library.jpg" alt="図書館" />
+      <nuxt-img src="facilities/library.jpg" alt="図書館" loading="lazy" />
       <p>
         灘校の図書館は中学棟と高校棟の間にあります。全国の中学・高校でも有数の蔵書数を誇り、灘校の近くの東灘図書館よりも充実しているのではないかと言われるほどです。吹き抜けで開放的となっており、自然光のもとで読書や勉強に没頭することができます。また、本の貸し借りだけではなく自習や読書ができるよう、机や椅子が多く設置されており、寝転がるためのソファーや、冬場に出されるこたつなど、一風変わった家具もあります。
       </p>
@@ -170,7 +184,7 @@
     </section>
     <section>
       <h2>本館</h2>
-      <img src="@/assets/img/facilities/main_building.jpg" alt="本館" />
+      <nuxt-img src="facilities/main_building.jpg" alt="本館" loading="lazy" />
       <p>
         正門を入って正面に見える建物が本館です。灘校のシンボルとも言えます。阪神・淡路大震災の被害を免れ、1928年開校当時のままの建物です。2001年には文化庁によって国の登録有形文化財に指定されました。
       </p>
@@ -183,14 +197,10 @@
     </section>
   </div>
 </template>
-<script>
-export default {
-  head() {
-    return {
-      title: '学校設備',
-    }
-  },
-}
+<script setup lang="ts">
+useHead({
+  title: '学校設備',
+})
 </script>
 <style lang="scss" scoped>
 .midashi {

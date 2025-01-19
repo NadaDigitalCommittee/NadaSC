@@ -63,27 +63,33 @@
     </section>
   </div>
 </template>
-<script>
-export default {
-  head() {
-    return {
-      title: 'トップページ',
-    }
-  },
-  layout: 'indexpage',
-  mounted() {
-    const setFillHeight = () => {
-      const vh = window.innerHeight * 0.01
-      document.documentElement.style.setProperty('--vh', `${vh}px`)
-    }
+<script setup lang="ts">
+const img = useImage()
+const nadaPngIpxUrl = ref(`url(${img('nada.png')})`)
+const nadaReversePngIpxUrl = ref(`url(${img('nada-reverse.png')})`)
+const topimgJpgIpxUrl = ref(`url(${img('topimg.JPG', { rotate: null })})`)
+const topimgPcJpgIpxUrl = ref(`url(${img('topimgpc.JPG')})`)
 
-    // 初期化
-    setFillHeight()
-  },
-}
+definePageMeta({
+  layout: 'indexpage',
+})
+
+useHead({
+  title: 'トップページ',
+})
+
+onMounted(() => {
+  const setFillHeight = () => {
+    const vh = window.innerHeight * 0.01
+    document.documentElement.style.setProperty('--vh', `${vh}px`)
+  }
+
+  // 初期化
+  setFillHeight()
+})
 </script>
 <style lang="scss" scoped>
-::v-deep .main .header {
+:deep(.main .header) {
   height: 100vh;
   margin-bottom: 0;
   margin-top: 0;
@@ -94,7 +100,7 @@ export default {
   }
 
   .imgwrapper {
-    background-image: url('@/assets/img/nada-reverse.png');
+    background-image: v-bind(nadaReversePngIpxUrl);
     background-size: 15vw 15vw;
     background-position: center center;
     background-repeat: no-repeat;
@@ -118,7 +124,7 @@ export default {
         width: 3.3em;
         height: 3.3em;
         background-size: 3.3em 3.3em;
-        background-image: url('@/assets/img/nada.png');
+        background-image: v-bind(nadaPngIpxUrl);
       }
     }
   }
@@ -134,7 +140,7 @@ export default {
 .topimg {
   width: 100%;
   height: 100%;
-  background-image: url('@/assets/img/topimg.JPG');
+  background-image: v-bind(topimgJpgIpxUrl);
 
   background-size: cover;
 }
@@ -143,7 +149,7 @@ export default {
   .hero {
     height: -webkit-fill-available;
   }
-  ::v-deep .main .header {
+  :deep(.main .header) {
     height: -webkit-fill-available;
   }
 }
@@ -220,7 +226,7 @@ export default {
 // PC版
 @media screen and (min-width: 960px) {
   .topimg {
-    background-image: url('@/assets/img/topimgpc.JPG');
+    background-image: v-bind(topimgPcJpgIpxUrl);
   }
   .intro {
     display: flex;

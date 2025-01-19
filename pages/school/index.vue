@@ -9,14 +9,10 @@
     </p>
   </div>
 </template>
-<script>
-export default {
-  head() {
-    return {
-      title: '学校紹介',
-    }
-  },
-}
+<script setup lang="ts">
+useHead({
+  title: '学校紹介',
+})
 </script>
 <style lang="scss" scoped>
 .midashi {

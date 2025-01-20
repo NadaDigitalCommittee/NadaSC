@@ -21,7 +21,7 @@ export default defineNuxtConfig({
       ],
       link: [
         { rel: 'icon', type: 'image/x-icon', href: '/nada.ico' },
-        { rel: 'apple-touch-icon', href: '@/assets/img/nada-white.png' },
+        { rel: 'apple-touch-icon', href: '/nada-white.png' },
       ],
     },
   },

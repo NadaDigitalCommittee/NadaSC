@@ -66,7 +66,6 @@
 <script setup lang="ts">
 const img = useImage()
 const nadaPngIpxUrl = ref(`url(${img('nada.png')})`)
-const nadaReversePngIpxUrl = ref(`url(${img('nada-reverse.png')})`)
 const topimgJpgIpxUrl = ref(`url(${img('topimg.JPG', { rotate: null })})`)
 const topimgPcJpgIpxUrl = ref(`url(${img('topimgpc.JPG')})`)
 
@@ -100,10 +99,11 @@ onMounted(() => {
   }
 
   .imgwrapper {
-    background-image: v-bind(nadaReversePngIpxUrl);
+    background-image: v-bind(nadaPngIpxUrl);
     background-size: 15vw 15vw;
     background-position: center center;
     background-repeat: no-repeat;
+    filter: invert(100%);
   }
   .menu-trigger span {
     background-color: #fff;
@@ -125,6 +125,7 @@ onMounted(() => {
         height: 3.3em;
         background-size: 3.3em 3.3em;
         background-image: v-bind(nadaPngIpxUrl);
+        filter: invert(0%);
       }
     }
   }

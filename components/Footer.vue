@@ -2,7 +2,7 @@
   <div>
     <footer>
       <nuxt-link to="/" class="footer-topimg">
-        <nuxt-img src="nada-reverse.png" alt="topimg" />
+        <nuxt-img src="nada.png" alt="topimg" />
         <h1 class="midashi">灘校生徒会</h1>
       </nuxt-link>
       <div class="links">
@@ -38,6 +38,7 @@ footer {
     color: rgba(255, 255, 255, 0.777);
     img {
       width: 7em;
+      filter: invert(100%);
     }
     h1.midashi {
       font-weight: 500;

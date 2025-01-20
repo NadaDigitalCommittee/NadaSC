@@ -22,10 +22,6 @@ export default defineNuxtConfig({
       link: [
         { rel: 'icon', type: 'image/x-icon', href: '/nada.ico' },
         { rel: 'apple-touch-icon', href: '@/assets/img/nada-white.png' },
-        {
-          rel: 'stylesheet',
-          href: 'https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Round|Material+Icons+Sharp|Material+Icons+Two+Tone',
-        },
       ],
     },
   },
@@ -33,14 +29,13 @@ export default defineNuxtConfig({
   css: [
     '@/assets/css/ress.min.css',
     '@/assets/css/style.scss',
-    '@fortawesome/fontawesome-svg-core/styles.css',
   ],
 
   plugins: [],
 
   components: true,
 
-  modules: ['@nuxt/image', '@nuxt/eslint'],
+  modules: ['@nuxt/image', '@nuxt/eslint', '@nuxt/icon'],
 
   image: {
     provider: 'ipx',
@@ -54,14 +49,7 @@ export default defineNuxtConfig({
     },
   },
 
-  build: {
-    transpile: [
-      '@fortawesome/vue-fontawesome',
-      '@fortawesome/fontawesome-svg-core',
-      '@fortawesome/free-solid-svg-icons',
-      '@fortawesome/free-brands-svg-icons',
-    ],
-  },
+  build: {},
 
   compatibilityDate: '2025-01-18',
 

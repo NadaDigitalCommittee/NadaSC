@@ -6,20 +6,21 @@
         <h1 class="midashi">灘校生徒会</h1>
       </nuxt-link>
       <div class="links">
-        <a href="https://twitter.com/nadasc_official" target="_blank">
-          <font-awesome-icon :icon="['fab', 'twitter']" class="icons"
-        /></a>
+        <a href="https://x.com/nadasc_official" target="_blank">
+          <Icon name="prime:twitter" mode="svg" />
+        </a>
         <a
           href="https://ja-jp.facebook.com/nadastudentcouncil/"
           target="_blank"
         >
-          <font-awesome-icon :icon="['fab', 'facebook']" class="icons"
-        /></a>
+          <Icon name="fa-brands:facebook" mode="svg" />
+        </a>
         <a
           href="https://www.youtube.com/channel/UCpGYVFAe4b0tkFNftciLrHQ"
           target="_blank"
-          ><font-awesome-icon :icon="['fab', 'youtube']" class="icons"
-        /></a>
+        >
+          <Icon name="fa-brands:youtube" mode="svg" />
+        </a>
       </div>
       <p class="copyright">&copy; 2022 Nada Digital Committee</p>
     </footer>
@@ -64,7 +65,7 @@ footer {
     display: flex;
     width: 13em;
     justify-content: space-between;
-    .icons {
+    .iconify {
       font-size: 2em;
       color: rgba(255, 255, 255, 0.777);
     }

@@ -3,6 +3,7 @@
     <div class="title" @click="open = !open">
       <dt :class="{ isopen: open }">
         <slot name="title"></slot>
+        <Icon name="material-symbols:arrow-drop-down" mode="svg" />
       </dt>
     </div>
     <transition name="open">
@@ -25,18 +26,15 @@ const open = ref(false)
     margin-bottom: 1em;
     position: relative;
     border-bottom: 1px #000 solid;
-  }
-  dt::after {
-    font-family: 'Material Icons';
-    content: '\e5c5';
-    font-weight: 900;
-    position: absolute;
-    top: 50%;
-    right: 5vw;
-    transform: translateY(-50%);
-  }
-  dt.isopen::after {
-    content: '\e5c7';
+    .iconify {
+      position: absolute;
+      top: 0%;
+      right: 5vw;
+      transform: rotate(0deg);
+    }
+    &.isopen .iconify {
+      transform: rotate(180deg);
+    }
   }
   dd {
     line-height: 1.5;

@@ -20,9 +20,7 @@
     <div class="header">
       <div class="inside-header">
         <nuxt-link to="/">
-          <div class="imgwrapper">
-            <!-- <nuxt-img src="nada.png" alt="topimg" /> -->
-          </div>
+          <Icon name="nada-icons:emblem" mode="svg" class="emblem" />
           <h1>灘校生徒会</h1>
         </nuxt-link>
         <!-- ハンバーガーメニュー -->
@@ -68,9 +66,6 @@
   </div>
 </template>
 <script setup lang="ts">
-const img = useImage()
-const nadaPngIpxUrl = ref(`url(${img('nada.png')})`)
-
 const isopen = ref(false)
 const pcmenuopen = ref(false)
 const hoverindex = ref<number | null>(null)
@@ -154,14 +149,10 @@ const mouseleave = (_index: number) => {
     z-index: 10;
     // filter: drop-shadow(0px 0px 5px #cccccc);
   }
-  .imgwrapper {
+  .emblem {
     width: 15vw;
     height: 15vw;
     margin-right: 10px;
-    background-image: v-bind(nadaPngIpxUrl);
-    background-size: 15vw 15vw;
-    background-position: center center;
-    background-repeat: no-repeat;
   }
 
   h1 {
@@ -269,10 +260,9 @@ nav.active {
       margin-top: 0;
     }
     a {
-      .imgwrapper {
+      .emblem {
         width: 3.3em;
         height: 3.3em;
-        background-size: 3.3em;
       }
     }
   }

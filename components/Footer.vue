@@ -1,10 +1,10 @@
 <template>
   <div>
     <footer>
-      <nuxt-link to="/" class="footer-topimg">
-        <nuxt-img src="nada.png" alt="topimg" />
+      <div class="footer-topimg">
+        <Icon name="nada-icons:emblem" mode="svg" size="7em" alt="校章" />
         <h1 class="midashi">灘校生徒会</h1>
-      </nuxt-link>
+      </div>
       <div class="links">
         <a href="https://x.com/nadasc_official" target="_blank">
           <Icon name="prime:twitter" mode="svg" />
@@ -35,11 +35,6 @@ footer {
   color: rgba(255, 255, 255, 0.777);
   .footer-topimg {
     text-decoration: none;
-    color: rgba(255, 255, 255, 0.777);
-    img {
-      width: 7em;
-      filter: invert(100%);
-    }
     h1.midashi {
       font-weight: 500;
       font-size: 1.5em;

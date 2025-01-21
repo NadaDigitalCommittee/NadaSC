@@ -65,7 +65,6 @@
 </template>
 <script setup lang="ts">
 const img = useImage()
-const nadaPngIpxUrl = ref(`url(${img('nada.png')})`)
 const topimgJpgIpxUrl = ref(`url(${img('topimg.JPG', { rotate: null })})`)
 const topimgPcJpgIpxUrl = ref(`url(${img('topimgpc.JPG')})`)
 
@@ -98,13 +97,6 @@ onMounted(() => {
     color: #fff;
   }
 
-  .imgwrapper {
-    background-image: v-bind(nadaPngIpxUrl);
-    background-size: 15vw 15vw;
-    background-position: center center;
-    background-repeat: no-repeat;
-    filter: invert(100%);
-  }
   .menu-trigger span {
     background-color: #fff;
   }
@@ -120,13 +112,6 @@ onMounted(() => {
     }
     a {
       color: #000;
-      .imgwrapper {
-        width: 3.3em;
-        height: 3.3em;
-        background-size: 3.3em 3.3em;
-        background-image: v-bind(nadaPngIpxUrl);
-        filter: invert(0%);
-      }
     }
   }
 }

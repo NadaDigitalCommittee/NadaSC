@@ -49,6 +49,15 @@ export default defineNuxtConfig({
     },
   },
 
+  icon: {
+    customCollections: [
+      {
+        prefix: 'nada-icons',
+        dir: './assets/icons'
+      },
+    ],
+  },
+
   build: {},
 
   compatibilityDate: '2025-01-18',

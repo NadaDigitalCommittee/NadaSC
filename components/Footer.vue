@@ -7,22 +7,19 @@
       </div>
       <div class="links">
         <a href="https://x.com/nadasc_official" target="_blank">
-          <Icon name="prime:twitter" mode="svg" />
+          <Icon name="simple-icons:x" mode="svg" />
         </a>
         <a
           href="https://ja-jp.facebook.com/nadastudentcouncil/"
           target="_blank"
         >
-          <Icon name="fa-brands:facebook" mode="svg" />
+          <Icon name="simple-icons:facebook" mode="svg" />
         </a>
-        <a
-          href="https://www.youtube.com/channel/UCpGYVFAe4b0tkFNftciLrHQ"
-          target="_blank"
-        >
-          <Icon name="fa-brands:youtube" mode="svg" />
+        <a href="https://www.youtube.com/@灘校生徒会" target="_blank">
+          <Icon name="simple-icons:youtube" mode="svg" />
         </a>
       </div>
-      <p class="copyright">&copy; 2022 Nada Digital Committee</p>
+      <p class="copyright">&copy; 2025 Nada Digital Committee</p>
     </footer>
   </div>
 </template>

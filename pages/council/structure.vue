@@ -1,8 +1,8 @@
 <template>
   <div>
     <h1 class="midashi">生徒会構造図<span>Student Council Structure</span></h1>
-    <p class="comment">※掲載されている画像は2022年4月時点でのものです。</p>
-    <nuxt-img src="structure.jpg" alt="" />
+    <p class="comment">※掲載されている画像は2025年2月時点でのものです。</p>
+    <nuxt-img src="structure.png" alt="生徒会構造図" />
   </div>
 </template>
 <script setup lang="ts">

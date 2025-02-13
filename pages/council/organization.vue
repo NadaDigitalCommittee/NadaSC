@@ -78,11 +78,6 @@
               <p>
                 体育委員長は高校１年及び高校２年の生徒会員から選挙されます。
               </p>
-              <p>
-                <a href="https://athlete.nada-sc.jp/" target="_blank"
-                  >体育祭HPはこちら</a
-                >
-              </p>
             </template>
           </Accordion>
           <Accordion>

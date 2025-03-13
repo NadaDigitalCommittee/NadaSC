@@ -6,7 +6,7 @@
   "timezone": "Asia/Tokyo",
   "dependencyDashboard": true,
   "automerge": false,
-  "schedule": ["* * * * 0,6"],
+  "schedule": ["at any time"],
   "minimumReleaseAge": "3 days",
   "rangeStrategy": "replace"
 }

@@ -8,5 +8,31 @@
   "automerge": false,
   "schedule": ["at any time"],
   "minimumReleaseAge": "3 days",
-  "rangeStrategy": "replace"
+  "rangeStrategy": "bump",
+  "packageRules": [
+    {
+      "matchPackageNames": [
+        "@nuxt/eslint",
+        "@nuxt/icon",
+        "@nuxt/image",
+        "@types/eslint-config-prettier",
+        "eslint-config-prettier",
+        "@vue/compiler-sfc",
+        "vue-tsc"
+      ],
+      "addLabels": ["renovate-automerge"],
+      "matchUpdateTypes": ["minor", "patch"],
+      "automerge": true,
+      "platformAutomerge": true,
+      "ignoreTests": false
+    },
+    {
+      "matchPackageNames": ["eslint", "prettier", "sass", "typescript"],
+      "addLabels": ["renovate-automerge"],
+      "matchUpdateTypes": ["patch"],
+      "automerge": true,
+      "platformAutomerge": true,
+      "ignoreTests": false
+    }
+  ]
 }

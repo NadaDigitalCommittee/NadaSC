@@ -3418,7 +3418,7 @@ __metadata:
     "@nuxt/image": "npm:^1.10.0"
     "@types/eslint-config-prettier": "npm:^6.11.3"
     "@vue/compiler-sfc": "npm:^3.5.13"
-    eslint: "npm:^9.25.0"
+    eslint: "npm:^9.25.1"
     eslint-config-prettier: "npm:^10.1.2"
     nuxt: "npm:^3.16.2"
     prettier: "npm:^3.5.3"
@@ -5331,7 +5331,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint@npm:^9.25.0":
+"eslint@npm:^9.25.1":
   version: 9.25.1
   resolution: "eslint@npm:9.25.1"
   dependencies:

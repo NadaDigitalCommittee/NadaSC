@@ -3874,7 +3874,7 @@ __metadata:
     "@vue/compiler-sfc": "npm:^3.5.13"
     eslint: "npm:^9.25.1"
     eslint-config-prettier: "npm:^10.1.2"
-    nuxt: "npm:^3.17.0"
+    nuxt: "npm:^3.17.1"
     prettier: "npm:^3.5.3"
     sass: "npm:^1.87.0"
     typescript: "npm:^5.8.3"
@@ -8909,7 +8909,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"nuxt@npm:^3.17.0":
+"nuxt@npm:^3.17.1":
   version: 3.17.1
   resolution: "nuxt@npm:3.17.1"
   dependencies:

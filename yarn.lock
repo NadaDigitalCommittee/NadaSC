@@ -1379,10 +1379,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eslint/js@npm:9.26.0, @eslint/js@npm:^9.26.0":
+"@eslint/js@npm:9.26.0":
   version: 9.26.0
   resolution: "@eslint/js@npm:9.26.0"
   checksum: 10c0/89fa45b7ff7f3c2589ea1f04a31b4f6d41ad85ecac98e519195e8b3a908b103c892ac19c4aec0629cfeccefd9e5b63c2f1269183d63016e7de722b97a085dcf4
+  languageName: node
+  linkType: hard
+
+"@eslint/js@npm:^9.27.0":
+  version: 9.27.0
+  resolution: "@eslint/js@npm:9.27.0"
+  checksum: 10c0/79b219ceda79182732954b52f7a494f49995a9a6419c7ae0316866e324d3706afeb857e1306bb6f35a4caaf176a5174d00228fc93d36781a570d32c587736564
   languageName: node
   linkType: hard
 
@@ -2013,21 +2020,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nuxt/eslint-config@npm:1.4.0":
-  version: 1.4.0
-  resolution: "@nuxt/eslint-config@npm:1.4.0"
+"@nuxt/eslint-config@npm:1.4.1":
+  version: 1.4.1
+  resolution: "@nuxt/eslint-config@npm:1.4.1"
   dependencies:
     "@antfu/install-pkg": "npm:^1.1.0"
     "@clack/prompts": "npm:^0.10.1"
-    "@eslint/js": "npm:^9.26.0"
-    "@nuxt/eslint-plugin": "npm:1.4.0"
+    "@eslint/js": "npm:^9.27.0"
+    "@nuxt/eslint-plugin": "npm:1.4.1"
     "@stylistic/eslint-plugin": "npm:^4.2.0"
     "@typescript-eslint/eslint-plugin": "npm:^8.32.1"
     "@typescript-eslint/parser": "npm:^8.32.1"
     eslint-config-flat-gitignore: "npm:^2.1.0"
     eslint-flat-config-utils: "npm:^2.0.1"
     eslint-merge-processors: "npm:^2.0.0"
-    eslint-plugin-import-x: "npm:^4.11.1"
+    eslint-plugin-import-x: "npm:^4.12.2"
     eslint-plugin-jsdoc: "npm:^50.6.17"
     eslint-plugin-regexp: "npm:^2.7.0"
     eslint-plugin-unicorn: "npm:^59.0.1"
@@ -2043,30 +2050,30 @@ __metadata:
   peerDependenciesMeta:
     eslint-plugin-format:
       optional: true
-  checksum: 10c0/544351c680ba301114aa336567b1945ee19091a8aca0c1c260ef9c4102c350a130158b3f541d436590c7d7d666485bfb33778f271c54321988b53a7fd76a60c4
+  checksum: 10c0/137837c810e5341971dd7939260944a82a2fbd9e5b994904dbd860dc45809b37283885b183efed16c4b8e80d22684d986e16bfd3e19ef6111fea65ef51960c83
   languageName: node
   linkType: hard
 
-"@nuxt/eslint-plugin@npm:1.4.0":
-  version: 1.4.0
-  resolution: "@nuxt/eslint-plugin@npm:1.4.0"
+"@nuxt/eslint-plugin@npm:1.4.1":
+  version: 1.4.1
+  resolution: "@nuxt/eslint-plugin@npm:1.4.1"
   dependencies:
     "@typescript-eslint/types": "npm:^8.32.1"
     "@typescript-eslint/utils": "npm:^8.32.1"
   peerDependencies:
     eslint: ^9.0.0
-  checksum: 10c0/9f301c0199dc6252813063179e66c40f1396fe40edc7b2450c1e4508653a51957b7efe0aae4b26aa06f38b7fd738e84f08b3ee1fbc6378746c5e9919cd28f8ac
+  checksum: 10c0/619170fc0c533c7f4acfccf83e56943964a1b6539e4ac15f6967b6e29010df40625dfedbee24af6f7313be6b92bb388d4e89efe122a1160cd1e241f68d43dd1e
   languageName: node
   linkType: hard
 
-"@nuxt/eslint@npm:^1.4.0":
-  version: 1.4.0
-  resolution: "@nuxt/eslint@npm:1.4.0"
+"@nuxt/eslint@npm:^1.4.1":
+  version: 1.4.1
+  resolution: "@nuxt/eslint@npm:1.4.1"
   dependencies:
     "@eslint/config-inspector": "npm:^1.0.2"
     "@nuxt/devtools-kit": "npm:^2.4.1"
-    "@nuxt/eslint-config": "npm:1.4.0"
-    "@nuxt/eslint-plugin": "npm:1.4.0"
+    "@nuxt/eslint-config": "npm:1.4.1"
+    "@nuxt/eslint-plugin": "npm:1.4.1"
     "@nuxt/kit": "npm:^3.17.3"
     chokidar: "npm:^4.0.3"
     eslint-flat-config-utils: "npm:^2.0.1"
@@ -2085,7 +2092,7 @@ __metadata:
       optional: true
     vite-plugin-eslint2:
       optional: true
-  checksum: 10c0/772cee114f7042a3feef664615599326d23cd7fe58bd1ebadcdf24488442c21351aa37782fe2faa0f9a4d24a75d23a41e74136d728f624d5c75a6cb8fabebcd9
+  checksum: 10c0/fd0d4ee132e25baf5b143dc559714f31d8a7bb1894418aedfaf759d8796a6eb9a8429c44fda073170fb368bf38d6ea6d8b62eebc25421fee9a8f4117bc087c62
   languageName: node
   linkType: hard
 
@@ -3847,7 +3854,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "NadaSC@workspace:."
   dependencies:
-    "@nuxt/eslint": "npm:^1.4.0"
+    "@nuxt/eslint": "npm:^1.4.1"
     "@nuxt/icon": "npm:^1.13.0"
     "@nuxt/image": "npm:^1.10.0"
     "@types/eslint-config-prettier": "npm:^6.11.3"
@@ -6162,9 +6169,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-import-x@npm:^4.11.1":
-  version: 4.11.1
-  resolution: "eslint-plugin-import-x@npm:4.11.1"
+"eslint-plugin-import-x@npm:^4.12.2":
+  version: 4.12.2
+  resolution: "eslint-plugin-import-x@npm:4.12.2"
   dependencies:
     "@typescript-eslint/utils": "npm:^8.31.0"
     comment-parser: "npm:^1.4.1"
@@ -6179,7 +6186,7 @@ __metadata:
     unrs-resolver: "npm:^1.7.0"
   peerDependencies:
     eslint: ^8.57.0 || ^9.0.0
-  checksum: 10c0/9b0cde9ba76eac4252ee7cf6fd7f2dae5051c85cb40c64909db6bdfa53b619bc145357aa637f98381053331c2e0f50f888409b34e17d69468d16685967d680d9
+  checksum: 10c0/c4a9eb3432e6591d6fa5f105f74db1836b5533585c57fd42e38f14d870bfeb99c7b4bad35f7e8ceab9792f86a93ddef5f43166b320ec622e7c567bbcb475dd88
   languageName: node
   linkType: hard
 

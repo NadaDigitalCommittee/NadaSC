@@ -1329,12 +1329,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@iconify/collections@npm:^1.0.548":
-  version: 1.0.549
-  resolution: "@iconify/collections@npm:1.0.549"
+"@iconify/collections@npm:^1.0.560":
+  version: 1.0.561
+  resolution: "@iconify/collections@npm:1.0.561"
   dependencies:
     "@iconify/types": "npm:*"
-  checksum: 10c0/ba36a537e168a81b8e171f61899e5b17f01285aa65287ff02ed4b5f652d6cc878ca3107d37dd14373af2a6acbd5ce1083037488f2c02f39a1e90a80a18269a1d
+  checksum: 10c0/974cb98f486551144ac87f25d58b55f54367e6a14a671901fd81064d4dfe4a460cb1717fd9c3065f8a29ec09201f41ee467ab55ba815ae6041b791c7a91cda91
   languageName: node
   linkType: hard
 
@@ -1770,6 +1770,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@nuxt/devtools-kit@npm:^2.5.0":
+  version: 2.5.0
+  resolution: "@nuxt/devtools-kit@npm:2.5.0"
+  dependencies:
+    "@nuxt/kit": "npm:^3.17.4"
+    "@nuxt/schema": "npm:^3.17.4"
+    execa: "npm:^8.0.1"
+  peerDependencies:
+    vite: ">=6.0"
+  checksum: 10c0/64a7db57d7b47b56e4cd74df80db3ec5bc9bb0f1707e565ad97bdf09b8e59f8c3413498fee6834e409252a33e79dbe3ced5ad1c9b98262aab2639d0d8aea61e4
+  languageName: node
+  linkType: hard
+
 "@nuxt/devtools-wizard@npm:2.4.1":
   version: 2.4.1
   resolution: "@nuxt/devtools-wizard@npm:2.4.1"
@@ -1908,16 +1921,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nuxt/icon@npm:^1.13.0":
-  version: 1.13.0
-  resolution: "@nuxt/icon@npm:1.13.0"
+"@nuxt/icon@npm:^1.14.0":
+  version: 1.14.0
+  resolution: "@nuxt/icon@npm:1.14.0"
   dependencies:
-    "@iconify/collections": "npm:^1.0.548"
+    "@iconify/collections": "npm:^1.0.560"
     "@iconify/types": "npm:^2.0.0"
     "@iconify/utils": "npm:^2.3.0"
     "@iconify/vue": "npm:^5.0.0"
-    "@nuxt/devtools-kit": "npm:^2.4.1"
-    "@nuxt/kit": "npm:^3.17.3"
+    "@nuxt/devtools-kit": "npm:^2.5.0"
+    "@nuxt/kit": "npm:^3.17.5"
     consola: "npm:^3.4.2"
     local-pkg: "npm:^1.1.1"
     mlly: "npm:^1.7.4"
@@ -1925,8 +1938,8 @@ __metadata:
     pathe: "npm:^2.0.3"
     picomatch: "npm:^4.0.2"
     std-env: "npm:^3.9.0"
-    tinyglobby: "npm:^0.2.13"
-  checksum: 10c0/78f078809cf0979b7c3cf4250f125c74dcb145fbe2f298da7a820af705065f47f3717a71b5beeddf7d5646416a3c4c18d51080186cf34f9c824458e2ad504b6d
+    tinyglobby: "npm:^0.2.14"
+  checksum: 10c0/32f1ec80cb63640ac9a789e2fa885521db236ff122faf418fcd9f8e6e9455775b9e5207afa8782684c0221311cdc7b6d0f843588ef6bef4ea4a4599b807c037d
   languageName: node
   linkType: hard
 
@@ -1952,7 +1965,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nuxt/kit@npm:3.17.5":
+"@nuxt/kit@npm:3.17.5, @nuxt/kit@npm:^3.17.4, @nuxt/kit@npm:^3.17.5":
   version: 3.17.5
   resolution: "@nuxt/kit@npm:3.17.5"
   dependencies:
@@ -2042,7 +2055,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nuxt/schema@npm:3.17.5":
+"@nuxt/schema@npm:3.17.5, @nuxt/schema@npm:^3.17.4":
   version: 3.17.5
   resolution: "@nuxt/schema@npm:3.17.5"
   dependencies:
@@ -3883,7 +3896,7 @@ __metadata:
   resolution: "NadaSC@workspace:."
   dependencies:
     "@nuxt/eslint": "npm:^1.4.1"
-    "@nuxt/icon": "npm:^1.13.0"
+    "@nuxt/icon": "npm:^1.14.0"
     "@nuxt/image": "npm:^1.10.0"
     "@types/eslint-config-prettier": "npm:^6.11.3"
     "@vue/compiler-sfc": "npm:^3.5.16"

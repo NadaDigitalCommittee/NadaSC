@@ -4024,7 +4024,7 @@ __metadata:
     eslint: "npm:^9.29.0"
     eslint-config-prettier: "npm:^10.1.5"
     nuxt: "npm:^3.17.5"
-    prettier: "npm:^3.6.1"
+    prettier: "npm:^3.6.2"
     sass: "npm:^1.89.2"
     typescript: "npm:^5.8.3"
     vue: "npm:^3.5.17"
@@ -9882,7 +9882,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:^3.6.1":
+"prettier@npm:^3.6.2":
   version: 3.6.2
   resolution: "prettier@npm:3.6.2"
   bin:

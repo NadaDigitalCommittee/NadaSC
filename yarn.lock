@@ -1350,12 +1350,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@iconify/collections@npm:^1.0.560":
-  version: 1.0.561
-  resolution: "@iconify/collections@npm:1.0.561"
+"@iconify/collections@npm:^1.0.563":
+  version: 1.0.564
+  resolution: "@iconify/collections@npm:1.0.564"
   dependencies:
     "@iconify/types": "npm:*"
-  checksum: 10c0/974cb98f486551144ac87f25d58b55f54367e6a14a671901fd81064d4dfe4a460cb1717fd9c3065f8a29ec09201f41ee467ab55ba815ae6041b791c7a91cda91
+  checksum: 10c0/8eb0a2f089802802890f9a6a1afd47a7d46a2fa465aea730f647a524bb0c802dc76346cb373968c45f74e6747f6fa5ea1a23529fcc71f04584b5dc1144a6442a
   languageName: node
   linkType: hard
 
@@ -1942,11 +1942,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nuxt/icon@npm:^1.14.0":
-  version: 1.14.0
-  resolution: "@nuxt/icon@npm:1.14.0"
+"@nuxt/icon@npm:^1.15.0":
+  version: 1.15.0
+  resolution: "@nuxt/icon@npm:1.15.0"
   dependencies:
-    "@iconify/collections": "npm:^1.0.560"
+    "@iconify/collections": "npm:^1.0.563"
     "@iconify/types": "npm:^2.0.0"
     "@iconify/utils": "npm:^2.3.0"
     "@iconify/vue": "npm:^5.0.0"
@@ -1960,7 +1960,7 @@ __metadata:
     picomatch: "npm:^4.0.2"
     std-env: "npm:^3.9.0"
     tinyglobby: "npm:^0.2.14"
-  checksum: 10c0/32f1ec80cb63640ac9a789e2fa885521db236ff122faf418fcd9f8e6e9455775b9e5207afa8782684c0221311cdc7b6d0f843588ef6bef4ea4a4599b807c037d
+  checksum: 10c0/edb85cd78ed33dfaa43f391d62a18a27576eeee08d7bb371bd96f8a29e803d71bc6a590a20f6d3d09ddfda0654d9b2caaa01474fdf1179e199c0bf5c925554aa
   languageName: node
   linkType: hard
 
@@ -4017,7 +4017,7 @@ __metadata:
   resolution: "NadaSC@workspace:."
   dependencies:
     "@nuxt/eslint": "npm:^1.4.1"
-    "@nuxt/icon": "npm:^1.14.0"
+    "@nuxt/icon": "npm:^1.15.0"
     "@nuxt/image": "npm:^1.10.0"
     "@types/eslint-config-prettier": "npm:^6.11.3"
     "@vue/compiler-sfc": "npm:^3.5.17"

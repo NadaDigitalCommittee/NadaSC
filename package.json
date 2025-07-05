@@ -27,7 +27,7 @@
     "prettier": "^3.6.2",
     "sass": "^1.89.2",
     "typescript": "^5.8.3",
-    "vue-tsc": "^2.2.10"
+    "vue-tsc": "^2.2.12"
   },
   "packageManager": "yarn@4.9.2"
 }

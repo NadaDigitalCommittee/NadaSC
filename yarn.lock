@@ -1915,7 +1915,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nuxt/eslint@npm:^1.5.0":
+"@nuxt/eslint@npm:^1.5.2":
   version: 1.5.2
   resolution: "@nuxt/eslint@npm:1.5.2"
   dependencies:
@@ -3925,7 +3925,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "NadaSC@workspace:."
   dependencies:
-    "@nuxt/eslint": "npm:^1.5.0"
+    "@nuxt/eslint": "npm:^1.5.2"
     "@nuxt/icon": "npm:^1.15.0"
     "@nuxt/image": "npm:^1.10.0"
     "@types/eslint-config-prettier": "npm:^6.11.3"

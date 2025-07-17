@@ -6,7 +6,7 @@
         <h1 class="midashi">灘校生徒会</h1>
       </div>
       <div class="links">
-        <a href="https://x.com/nadasc_official" target="_blank">
+        <a href="https://x.com/nada_council" target="_blank">
           <Icon name="simple-icons:x" mode="svg" />
         </a>
         <a

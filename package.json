@@ -13,21 +13,21 @@
     "lintfix": "prettier --write --list-different . && yarn lint:js --fix"
   },
   "dependencies": {
-    "nuxt": "^3.17.6",
+    "nuxt": "^4.0.0",
     "vue": "^3.5.17"
   },
   "devDependencies": {
-    "@nuxt/eslint": "^1.5.2",
+    "@nuxt/eslint": "^1.6.0",
     "@nuxt/icon": "^1.15.0",
     "@nuxt/image": "^1.10.0",
     "@types/eslint-config-prettier": "^6.11.3",
     "@vue/compiler-sfc": "^3.5.17",
     "eslint": "^9.31.0",
-    "eslint-config-prettier": "^10.1.5",
+    "eslint-config-prettier": "^10.1.8",
     "prettier": "^3.6.2",
     "sass": "^1.89.2",
     "typescript": "^5.8.3",
-    "vue-tsc": "^3.0.1"
+    "vue-tsc": "^3.0.3"
   },
   "packageManager": "yarn@4.9.2"
 }

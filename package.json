@@ -14,14 +14,14 @@
   },
   "dependencies": {
     "nuxt": "^4.0.1",
-    "vue": "^3.5.17"
+    "vue": "^3.5.18"
   },
   "devDependencies": {
     "@nuxt/eslint": "^1.7.1",
     "@nuxt/icon": "^1.15.0",
     "@nuxt/image": "^1.10.0",
     "@types/eslint-config-prettier": "^6.11.3",
-    "@vue/compiler-sfc": "^3.5.17",
+    "@vue/compiler-sfc": "^3.5.18",
     "eslint": "^9.31.0",
     "eslint-config-prettier": "^10.1.8",
     "prettier": "^3.6.2",

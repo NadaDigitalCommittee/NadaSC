@@ -19,7 +19,7 @@
   "devDependencies": {
     "@nuxt/eslint": "^1.7.1",
     "@nuxt/icon": "^1.15.0",
-    "@nuxt/image": "^1.10.0",
+    "@nuxt/image": "^1.11.0",
     "@types/eslint-config-prettier": "^6.11.3",
     "@vue/compiler-sfc": "^3.5.18",
     "eslint": "^9.32.0",

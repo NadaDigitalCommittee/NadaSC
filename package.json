@@ -29,5 +29,5 @@
     "typescript": "^5.9.2",
     "vue-tsc": "^3.0.6"
   },
-  "packageManager": "yarn@4.9.2"
+  "packageManager": "yarn@4.9.3"
 }
